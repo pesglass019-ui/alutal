@@ -1,0 +1,1068 @@
+<title>ALUTAL</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="ALUTAL — شركة الوتال للألومنيوم والزجاج وتشكيل المعادن، جدة. واجهات زجاجية، حوائط ستائرية، كلادينج، ستانلس ستيل وزجاج فني.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Readex+Pro:wght@400;600;700&display=swap">
+<link rel="preload" as="image" href="img/hero.webp">
+<style>
+/* Layout: graphite "machined panel" grid — full-bleed photo bands, 12-col content at 1240px, hairline mullion rules, mono spec labels */
+:root{
+  --bg:#0D1013; --panel:#14181D; --panel-2:#1A1F25; --line:#272E36; --fg:#E7EAED; --muted:#98A2AD; --steel:#C3CAD2; --accent:#6EC4D6; --accent-ink:#06242B;
+  --scrim:rgba(8,10,12,.72);
+  --f-disp:"Archivo","Readex Pro",system-ui,sans-serif; --f-body:"IBM Plex Sans Arabic","Archivo",system-ui,sans-serif; --f-mono:"IBM Plex Mono",ui-monospace,monospace;
+  --wrap:1240px; --r:3px;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){
+  --bg:#EEF0F2; --panel:#FFFFFF; --panel-2:#F6F7F8; --line:#D3D8DD; --fg:#12161A; --muted:#58626C; --steel:#3B444D; --accent:#0E7489; --accent-ink:#FFFFFF; --scrim:rgba(8,10,12,.62); color-scheme:light }}
+:root[data-theme="light"]{ --bg:#EEF0F2; --panel:#FFFFFF; --panel-2:#F6F7F8; --line:#D3D8DD; --fg:#12161A; --muted:#58626C; --steel:#3B444D; --accent:#0E7489; --accent-ink:#FFFFFF; --scrim:rgba(8,10,12,.62); color-scheme:light }
+html[lang="ar"]{ --f-disp:"Readex Pro","Archivo",system-ui,sans-serif; }
+html[lang="ar"] [data-l="en"], html[lang="en"] [data-l="ar"]{display:none!important}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);font:16px/1.7 var(--f-body);-webkit-font-smoothing:antialiased}
+html[lang="en"] body{font-family:"Archivo",system-ui,sans-serif;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--f-disp);margin:0;text-wrap:balance;line-height:1.15;font-weight:700}
+html[lang="en"] h1, html[lang="en"] h2{font-stretch:118%;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media(min-width:760px){.wrap{padding-left:max(32px,env(safe-area-inset-left,0px));padding-right:max(32px,env(safe-area-inset-right,0px))}}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.skip{position:absolute;inset-inline-start:-9999px}
+.skip:focus{inset-inline-start:16px;top:16px;z-index:100;background:var(--accent);color:var(--accent-ink);padding:8px 12px}
+
+/* Header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.hdr .wrap{display:flex;align-items:center;gap:24px;height:68px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0}
+.brand svg{width:34px;height:34px}
+.brand b{font:800 20px/1 "Archivo",sans-serif;font-stretch:125%;letter-spacing:.06em}
+.brand small{display:block;font:500 11px/1.2 var(--f-body);color:var(--muted);letter-spacing:.02em;margin-top:3px}
+.nav{display:flex;gap:4px;margin-inline-start:auto}
+.nav a{text-decoration:none;font-size:14.5px;color:var(--muted);padding:8px 12px;border-radius:var(--r);transition:color .2s}
+.nav a:hover{color:var(--fg)}
+.nav a[aria-current="page"]{color:var(--fg);box-shadow:inset 0 -2px 0 var(--accent)}
+.tools{display:flex;gap:8px;align-items:center}
+.btn-ghost{font:500 13px/1 var(--f-mono);background:none;border:1px solid var(--line);color:var(--fg);padding:9px 11px;border-radius:var(--r);cursor:pointer;min-width:42px}
+.btn-ghost:hover{border-color:var(--steel)}
+.menu-btn{display:none}
+@media(max-width:1020px){
+  .nav{position:fixed;inset:68px 0 auto 0;top:calc(68px + env(safe-area-inset-top,0px));flex-direction:column;background:var(--panel);border-bottom:1px solid var(--line);padding:12px max(16px,env(safe-area-inset-right,0px)) 20px max(16px,env(safe-area-inset-left,0px));gap:0;transform:translateY(-8px);opacity:0;pointer-events:none;transition:.2s;margin:0}
+  .nav.open{transform:none;opacity:1;pointer-events:auto}
+  .nav a{padding:14px 4px;border-bottom:1px solid var(--line);font-size:16px}
+  .nav a[aria-current="page"]{box-shadow:none;color:var(--accent)}
+  .menu-btn{display:inline-flex}
+  .tools{margin-inline-start:auto}
+}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 15px/1 var(--f-body);text-decoration:none;padding:15px 22px;border-radius:var(--r);border:1px solid transparent;cursor:pointer;transition:transform .15s,background .2s,border-color .2s}
+html[lang="en"] .btn{font-family:"Archivo",sans-serif}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-primary:hover{transform:translateY(-1px);filter:brightness(1.08)}
+.btn-line{border-color:color-mix(in srgb,var(--fg) 30%,transparent);color:var(--fg)}
+.btn-line:hover{border-color:var(--fg)}
+.btn svg{width:16px;height:16px}
+html[dir="rtl"] .btn svg.arr{transform:scaleX(-1)}
+
+/* Views */
+.view{display:none}
+.view.on{display:block;animation:in .45s ease both}
+@keyframes in{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}
+section{padding-block:clamp(56px,8vw,104px)}
+.sec-head{display:grid;gap:14px;margin-bottom:clamp(28px,4vw,48px);max-width:760px}
+.sec-head h2{font-size:clamp(28px,4vw,44px)}
+.sec-head p{color:var(--muted);font-size:17px;max-width:62ch}
+.rule{border-top:1px solid var(--line)}
+
+/* Hero */
+.hero{position:relative;padding:0;isolation:isolate;overflow:hidden;background:#0B0D10}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;animation:zoom 14s ease-out both}
+@keyframes zoom{from{transform:scale(1.07)}to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(8,10,12,.9) 0%,rgba(8,10,12,.55) 55%,rgba(8,10,12,.25) 100%)}
+html[dir="rtl"] .hero::after{background:linear-gradient(270deg,rgba(8,10,12,.9) 0%,rgba(8,10,12,.55) 55%,rgba(8,10,12,.25) 100%)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:48px;align-items:end;padding-block:clamp(72px,11vw,148px) clamp(48px,6vw,72px);color:#EEF1F3}
+.hero h1{font-size:clamp(38px,6.4vw,82px);line-height:1.04;margin-block:22px 22px;color:#fff}
+html[lang="ar"] .hero h1{line-height:1.2}
+.hero h1 em{font-style:normal;color:#9BDCEA}
+.hero .lede{font-size:clamp(16px,1.6vw,19px);color:#C9D0D7;max-width:54ch}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero .btn-line{color:#fff;border-color:rgba(255,255,255,.4)}
+.hero .eyebrow{color:#9BDCEA}
+.section-card{background:rgba(12,15,18,.62);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:20px;border-radius:var(--r);color:#DDE3E8}
+.section-card .cap{font:500 11px/1.4 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:#9BDCEA;display:flex;justify-content:space-between;gap:8px}
+.section-card svg{width:100%;height:auto;margin-top:12px}
+.section-card p{font-size:13px;color:#AEB7C0;margin-top:10px}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.section-card{max-width:420px}}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-bottom:1px solid var(--line);background:var(--panel)}
+.stat{padding:28px clamp(16px,2.4vw,32px);border-inline-start:1px solid var(--line)}
+.stat:first-child{border-inline-start:0}
+.stat b{display:block;font:700 clamp(28px,3.6vw,46px)/1 "Archivo",sans-serif;font-stretch:112%;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.stat b sup{font-size:.42em;color:var(--accent);margin-inline-start:4px;vertical-align:top;position:relative;top:.3em}
+.stat span{display:block;color:var(--muted);font-size:14px;margin-top:10px}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat:nth-child(3){border-inline-start:0}.stat:nth-child(n+3){border-top:1px solid var(--line)}}
+
+/* Intro split */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center}
+.split .media{position:relative}
+.split .media img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r)}
+.split .media .tag{position:absolute;inset-inline-start:16px;bottom:16px;background:var(--bg);border:1px solid var(--line);padding:10px 14px;font:500 12px/1.4 var(--f-mono);border-radius:var(--r)}
+.split .copy{display:grid;gap:18px}
+.split .copy h2{font-size:clamp(28px,3.6vw,42px)}
+.split .copy p{color:var(--muted);font-size:17px}
+.checks{list-style:none;padding:0;margin:6px 0 0;display:grid;gap:10px}
+.checks li{display:flex;gap:12px;align-items:flex-start}
+.checks li::before{content:"";flex:0 0 8px;height:8px;margin-top:.62em;background:var(--accent);transform:rotate(45deg)}
+@media(max-width:860px){.split{grid-template-columns:1fr}}
+
+/* Service tiles (home) */
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.tile{background:var(--bg);padding:28px;display:grid;gap:12px;align-content:start;text-decoration:none;transition:background .2s;min-height:220px}
+.tile:hover{background:var(--panel)}
+.tile .code{font:500 12px/1 var(--f-mono);color:var(--muted);letter-spacing:.1em}
+.tile h3{font-size:21px}
+.tile p{color:var(--muted);font-size:15px}
+.tile .go{margin-top:auto;color:var(--accent);font:500 13px/1 var(--f-mono)}
+@media(max-width:900px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.tiles{grid-template-columns:1fr}.tile{min-height:0}}
+
+/* Featured projects */
+.feat{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
+.feat .pc:nth-child(1){grid-column:span 7}
+.feat .pc:nth-child(2){grid-column:span 5}
+.feat .pc:nth-child(n+3){grid-column:span 4}
+@media(max-width:900px){.feat .pc:nth-child(n){grid-column:span 12}}
+
+/* Project card */
+.pc{position:relative;display:block;text-align:start;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;cursor:pointer;color:inherit;font:inherit;padding:0;width:100%}
+.pc .ph{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--panel-2)}
+.pc .ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.pc:hover .ph img{transform:scale(1.04)}
+.pc .ph .cat{position:absolute;top:12px;inset-inline-start:12px;background:rgba(10,12,14,.78);color:#E8ECEF;font:500 11px/1 var(--f-mono);letter-spacing:.08em;padding:7px 9px;border-radius:2px;text-transform:uppercase}
+.pc .bp{position:absolute;inset:0;display:grid;place-content:center;text-align:center;gap:6px;color:var(--steel);
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:24px 24px;background-position:center}
+.pc .bp b{font:700 clamp(30px,3.4vw,42px)/1 "Archivo",sans-serif;font-stretch:115%;color:var(--fg);font-variant-numeric:tabular-nums;background:var(--panel-2);padding:4px 10px}
+.pc .bp b.soon{font-size:clamp(20px,2.2vw,26px);letter-spacing:.12em}
+.pc .bp span{font:500 12px/1.3 var(--f-mono);color:var(--muted);background:var(--panel-2);padding:2px 8px;justify-self:center}
+.pc .meta{padding:18px 20px 20px;display:grid;gap:8px}
+.pc h3{font-size:19px}
+.pc .loc{color:var(--muted);font-size:14px;display:flex;gap:8px;flex-wrap:wrap}
+.pc .kv{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.pc .kv span{font:500 12px/1 var(--f-mono);border:1px solid var(--line);padding:6px 8px;border-radius:2px;color:var(--steel)}
+
+/* Filter */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.filters button{font:500 14px/1 var(--f-body);background:none;border:1px solid var(--line);color:var(--muted);padding:11px 16px;border-radius:40px;cursor:pointer}
+html[lang="en"] .filters button{font-family:"Archivo",sans-serif}
+.filters button[aria-pressed="true"]{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+.filters button .n{font-family:var(--f-mono);font-size:11px;opacity:.7;margin-inline-start:6px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+
+/* Page head (inner views) */
+.phead{position:relative;padding-block:clamp(56px,8vw,96px) clamp(36px,5vw,56px);border-bottom:1px solid var(--line);overflow:hidden;isolation:isolate}
+.phead.img{color:#EEF1F3;background:#0B0D10}
+.phead.img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;opacity:.9}
+.phead.img::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(8,10,12,.92),rgba(8,10,12,.5))}
+.phead.img .eyebrow{color:#9BDCEA}
+.phead.img p{color:#C9D0D7}
+.phead h1{font-size:clamp(34px,5vw,60px);margin-block:18px 16px}
+.phead p{font-size:18px;color:var(--muted);max-width:62ch}
+
+/* About */
+.timeline{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--line)}
+.timeline div{padding:22px 22px 0 0;border-inline-start:1px solid var(--line);padding-inline-start:20px}
+.timeline div:first-child{border-inline-start:0;padding-inline-start:0}
+.timeline b{font:600 13px/1 var(--f-mono);color:var(--accent);letter-spacing:.06em}
+.timeline h4{font-size:18px;margin:12px 0 8px}
+.timeline p{color:var(--muted);font-size:15px}
+@media(max-width:860px){.timeline{grid-template-columns:1fr 1fr;row-gap:28px}.timeline div:nth-child(3){border-inline-start:0;padding-inline-start:0}}
+@media(max-width:520px){.timeline{grid-template-columns:1fr}.timeline div{border-inline-start:0;padding-inline-start:0}}
+.team{width:100%;border-collapse:collapse;font-size:15px}
+.team td{padding:14px 0;border-bottom:1px solid var(--line)}
+.team td:last-child{text-align:end;font:600 16px/1 var(--f-mono)}
+.team tr.total td{border-bottom:0;font-weight:700;padding-top:18px}
+.team tr.total td:last-child{color:var(--accent);font-size:22px}
+.quote{font-family:var(--f-disp);font-size:clamp(22px,2.8vw,32px);line-height:1.45;font-weight:600;max-width:30ch}
+.quote-wrap{display:grid;gap:18px;border-inline-start:3px solid var(--accent);padding-inline-start:24px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{border:1px solid var(--line);padding:9px 14px;border-radius:2px;font-size:14px;color:var(--steel);background:var(--panel)}
+
+/* Services detail */
+.svc{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,56px);padding-block:clamp(40px,6vw,72px);border-bottom:1px solid var(--line);align-items:start}
+.svc:last-child{border-bottom:0}
+.svc .pics{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.svc .pics img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:2px}
+.svc .pics img:first-child{grid-column:span 2;aspect-ratio:16/10}
+.svc .body{display:grid;gap:16px}
+.svc .num{font:500 12px/1 var(--f-mono);color:var(--accent);letter-spacing:.12em}
+.svc h2{font-size:clamp(24px,3vw,34px)}
+.svc .body>p{color:var(--muted);font-size:17px}
+.svc .specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:6px}
+.svc .specs div{background:var(--panel);padding:14px 16px}
+.svc .specs small{display:block;font:500 11px/1.3 var(--f-mono);color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.svc .specs b{display:block;margin-top:6px;font-weight:600;font-size:15px}
+@media(max-width:860px){.svc{grid-template-columns:1fr}}
+
+/* Specs page */
+.glass-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.gcard{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:grid;gap:10px;align-content:start}
+.gcard svg{width:100%;height:auto}
+.gcard h3{font-size:18px}
+.gcard .mono{color:var(--accent);font-size:13px}
+.gcard p{color:var(--muted);font-size:14px}
+@media(max-width:960px){.glass-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.glass-row{grid-template-columns:1fr}}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--panel)}
+.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:820px}
+.tbl th{font:500 11px/1.3 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:start;padding:14px 16px;border-bottom:1px solid var(--line);background:var(--panel-2);position:sticky;top:0}
+.tbl td{padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td.mono{font-size:13px;white-space:nowrap}
+.tbl td:first-child{font-weight:600}
+.tbl .pill{display:inline-block;font:500 11px/1 var(--f-mono);padding:5px 7px;border-radius:2px;border:1px solid var(--accent);color:var(--accent)}
+.tbl .pill.off{border-color:var(--line);color:var(--muted)}
+.tests{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.test{border-top:2px solid var(--accent);padding-top:18px;display:grid;gap:8px}
+.test small{font:500 12px/1 var(--f-mono);color:var(--muted)}
+.test b{font-size:20px;font-family:var(--f-disp)}
+.test p{color:var(--muted);font-size:15px}
+@media(max-width:860px){.tests{grid-template-columns:1fr}}
+.matgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media(max-width:760px){.matgrid{grid-template-columns:1fr}}
+.mat{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:24px;display:grid;gap:12px;align-content:start}
+.mat h3{font-size:20px}
+.mat p,.mat li{color:var(--muted);font-size:15px}
+.mat ul{margin:0;padding-inline-start:18px;display:grid;gap:6px}
+
+/* CTA band */
+.cta-band{background:var(--panel);border-block:1px solid var(--line)}
+.cta-band .wrap{display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;padding-block:clamp(40px,6vw,64px)}
+.cta-band h2{font-size:clamp(24px,3.2vw,38px);max-width:24ch}
+.cta-band .ctas{display:flex;flex-wrap:wrap;gap:12px}
+
+/* Contact */
+.contact{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,4vw,56px);align-items:start}
+@media(max-width:900px){.contact{grid-template-columns:1fr}}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:grid;gap:7px}
+.field.full{grid-column:1/-1}
+@media(max-width:600px){form{grid-template-columns:1fr}}
+label{font-size:14px;font-weight:500}
+label .req{color:var(--accent)}
+input,select,textarea{font:inherit;font-size:16px;color:var(--fg);background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:13px 14px;width:100%}
+textarea{min-height:140px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 25%,transparent)}
+.err{color:#E58A7A;font-size:13px;min-height:0}
+.form-foot{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+.form-foot small{color:var(--muted)}
+.done{grid-column:1/-1;background:var(--panel);border:1px solid var(--accent);border-radius:var(--r);padding:22px;display:grid;gap:12px}
+.done pre{white-space:pre-wrap;font:13px/1.6 var(--f-mono);background:var(--panel-2);padding:14px;border-radius:2px;margin:0;max-height:220px;overflow:auto}
+.done .row{display:flex;flex-wrap:wrap;gap:10px}
+.card-c{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.card-c .row{display:grid;gap:4px;padding:18px 22px;border-bottom:1px solid var(--line)}
+.card-c .row:last-child{border-bottom:0}
+.card-c small{font:500 11px/1.3 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.card-c .val{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:16px;font-weight:500}
+.card-c .val a{text-decoration:none;word-break:break-all}
+.cpy{font:500 12px/1 var(--f-mono);background:none;border:1px solid var(--line);color:var(--muted);padding:7px 9px;border-radius:2px;cursor:pointer;flex-shrink:0}
+.cpy:hover{color:var(--fg);border-color:var(--steel)}
+.ltr{direction:ltr;unicode-bidi:isolate}
+
+/* Footer */
+footer{border-top:1px solid var(--line);background:var(--panel);font-size:14px;color:var(--muted)}
+footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:32px;padding-block:48px 28px}
+footer h4{font-size:13px;font-family:var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--fg);margin-bottom:14px;font-weight:500}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--fg)}
+footer .base{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;border-top:1px solid var(--line);padding-top:20px;font-size:13px}
+@media(max-width:860px){footer .wrap{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){footer .wrap{grid-template-columns:1fr}}
+
+/* Modal */
+dialog{border:0;padding:0;background:var(--bg);color:var(--fg);width:min(1080px,100% - 24px);max-height:calc(100% - 24px);border-radius:var(--r);box-shadow:0 30px 80px rgba(0,0,0,.5)}
+dialog::backdrop{background:rgba(5,7,9,.75);backdrop-filter:blur(3px)}
+.m-in{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+@media(max-width:860px){.m-in{grid-template-columns:1fr}}
+.m-gal{background:#0A0C0E;position:relative}
+.m-gal .main{width:100%;aspect-ratio:4/3;object-fit:contain;background:#0A0C0E}
+.m-gal .bpbig{aspect-ratio:4/3;display:grid;place-content:center;text-align:center;gap:10px;color:#AEB7C0;background-image:linear-gradient(#1E242B 1px,transparent 1px),linear-gradient(90deg,#1E242B 1px,transparent 1px);background-size:28px 28px}
+.m-gal .bpbig b{font:700 56px/1 "Archivo",sans-serif;color:#fff;font-stretch:115%}
+.thumbs{display:flex;gap:6px;padding:8px;overflow-x:auto}
+.thumbs button{flex:0 0 72px;height:54px;padding:0;border:2px solid transparent;border-radius:2px;cursor:pointer;background:none;overflow:hidden}
+.thumbs button[aria-current="true"]{border-color:var(--accent)}
+.thumbs img{width:100%;height:100%;object-fit:cover}
+.m-body{padding:28px;display:grid;gap:16px;align-content:start;overflow:auto;max-height:calc(100vh - 24px)}
+.m-body h2{font-size:26px}
+.m-body .loc{color:var(--muted)}
+.m-facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.m-facts div{background:var(--panel);padding:12px 14px}
+.m-facts small{display:block;font:500 11px/1.3 var(--f-mono);color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.m-facts b{display:block;margin-top:4px;font-size:15px}
+.m-body ul{margin:0;padding-inline-start:18px;display:grid;gap:6px;color:var(--steel);font-size:15px}
+.m-close{position:absolute;top:10px;inset-inline-end:10px;z-index:3;width:40px;height:40px;border-radius:50%;border:0;background:rgba(10,12,14,.8);color:#fff;font-size:20px;cursor:pointer}
+html[lang="ar"] .eyebrow, html[lang="ar"] .svc .specs small, html[lang="ar"] .m-facts small, html[lang="ar"] .card-c small, html[lang="ar"] .tbl th, html[lang="ar"] .pc .cat, html[lang="ar"] .pc .bp span, html[lang="ar"] footer h4, html[lang="ar"] .m-gal .bpbig span{font-family:var(--f-body);letter-spacing:0;text-transform:none}
+html[lang="ar"] .eyebrow{font-size:13.5px;font-weight:500}
+.section-card .cap{direction:ltr}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+
+<a class="skip" href="#main"><span data-l="ar">انتقل إلى المحتوى</span><span data-l="en">Skip to content</span></a>
+
+<header class="hdr">
+  <div class="wrap">
+    <a class="brand" href="#home" aria-label="ALUTAL">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 37 36H29.5L20 17 10.5 36H3Z" fill="var(--accent)"/><path d="M14.2 28.5h11.6l2.6 5H11.6z" fill="var(--fg)"/></svg>
+      <span><b>ALUTAL</b><small><span data-l="ar">الوتال · ألومنيوم · زجاج · معادن</span><span data-l="en">Aluminum · Glass · Metal</span></small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#home"><span data-l="ar">الرئيسية</span><span data-l="en">Home</span></a>
+      <a href="#about"><span data-l="ar">من نحن</span><span data-l="en">About</span></a>
+      <a href="#services"><span data-l="ar">خدماتنا</span><span data-l="en">Expertise</span></a>
+      <a href="#projects"><span data-l="ar">المشاريع</span><span data-l="en">Projects</span></a>
+      <a href="#specs"><span data-l="ar">المواصفات الفنية</span><span data-l="en">Specifications</span></a>
+      <a href="#contact"><span data-l="ar">تواصل معنا</span><span data-l="en">Contact</span></a>
+    </nav>
+    <div class="tools">
+      <button class="btn-ghost" id="langBtn" type="button" aria-label="Switch language"><span data-l="ar">EN</span><span data-l="en">ع</span></button>
+      <button class="btn-ghost" id="themeBtn" type="button" aria-label="Toggle theme">◐</button>
+      <button class="btn-ghost menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HOME ============ -->
+<div class="view" id="v-home">
+  <section class="hero">
+    <img class="bg" src="img/hero.webp" alt="" fetchpriority="high">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow"><span data-l="ar">جدة · المملكة العربية السعودية · منذ 1986</span><span data-l="en">Jeddah · Saudi Arabia · Since 1986</span></div>
+        <h1><span data-l="ar">التميز في تشكيل <em>الألومنيوم والزجاج</em></span><span data-l="en">Excellence in forming <em>aluminum and glass</em></span></h1>
+        <p class="lede"><span data-l="ar">نصمم ونصنّع ونركّب الواجهات الزجاجية والحوائط الستائرية والكلادينج وأعمال الستانلس ستيل للمشاريع التجارية والحكومية والسكنية الكبرى، بفريق هندسي وفني من 61 متخصصاً.</span><span data-l="en">We design, fabricate and install glass façades, curtain walls, aluminum cladding and stainless steel works for major commercial, government and residential projects, with an in-house team of 61 engineers and technicians.</span></p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="#contact"><span data-l="ar">اطلب عرض سعر</span><span data-l="en">Request a quotation</span><svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+          <a class="btn btn-line" href="#projects"><span data-l="ar">استعرض المشاريع</span><span data-l="en">View projects</span></a>
+        </div>
+      </div>
+      <aside class="section-card" dir="ltr" aria-label="Double glazed unit section">
+        <div class="cap"><span>DGU · SECTION</span><span>6 + 12 + 6 mm</span></div>
+        <svg viewBox="0 0 300 150" role="img" aria-label="Double glazing: 6 mm glass, 12 mm air space, 6 mm glass">
+          <g font-family="IBM Plex Mono, monospace" font-size="10" fill="#AEB7C0">
+            <rect x="96" y="22" width="18" height="96" fill="#9BDCEA" fill-opacity=".55" stroke="#9BDCEA"/>
+            <rect x="114" y="22" width="36" height="96" fill="none" stroke="#5E6A75" stroke-dasharray="3 3"/>
+            <rect x="150" y="22" width="18" height="96" fill="#9BDCEA" fill-opacity=".55" stroke="#9BDCEA"/>
+            <rect x="114" y="104" width="36" height="14" fill="#5E6A75"/>
+            <rect x="114" y="22" width="36" height="6" fill="#3F4851"/>
+            <path d="M96 132h72M96 128v8M114 128v8M150 128v8M168 128v8" stroke="#9BDCEA" fill="none"/>
+            <text x="99" y="147">6</text><text x="126" y="147">12</text><text x="153" y="147">6</text>
+            <path d="M178 22v96M174 22h8M174 118h8" stroke="#5E6A75" fill="none"/>
+            <text x="186" y="74" fill="#DDE3E8">24 mm DG</text>
+            <text x="8" y="56">EXT.</text><text x="8" y="70" fill="#6E7A86">GLASS</text>
+            <text x="252" y="56">INT.</text><text x="252" y="70" fill="#6E7A86">SPACER</text>
+          </g>
+        </svg>
+        <p><span data-l="ar">الزجاج المزدوج 6+12+6 مم المعتمد في واجهات سوق 7 بنظام الحائط الستائري الذكي.</span><span data-l="en">6+12+6 mm double glazing, as specified for the Smart Curtain Wall façades of Souq 7.</span></p>
+      </aside>
+    </div>
+  </section>
+
+  <div class="stats">
+    <div class="stat"><b>1986</b><span data-l="ar">سنة التأسيس والانطلاق</span><span data-l="en">Established</span></div>
+    <div class="stat"><b>61</b><span data-l="ar">مهندساً وفنياً ضمن فريقنا</span><span data-l="en">Engineers and technicians</span></div>
+    <div class="stat"><b>19,750<sup>m²</sup></b><span data-l="ar">واجهات مشروع سوق 7</span><span data-l="en">Façades delivered at Souq 7</span></div>
+    <div class="stat"><b>840</b><span data-l="ar">معرضاً تجارياً في مشروع واحد</span><span data-l="en">Showrooms in a single project</span></div>
+  </div>
+
+  <section>
+    <div class="wrap split">
+      <div class="media">
+        <img src="img/souq7-6.webp" alt="Souq 7 curtain wall showrooms, Jeddah" loading="lazy">
+        <div class="tag mono">CW · ACP · STRUCTURAL GLAZING</div>
+      </div>
+      <div class="copy">
+        <div class="eyebrow"><span data-l="ar">عن الوتال</span><span data-l="en">About ALUTAL</span></div>
+        <h2><span data-l="ar">خبرة هندسية متكاملة من الدراسة حتى التركيب</span><span data-l="en">One team from engineering study to final installation</span></h2>
+        <p><span data-l="ar">الوتال لأنظمة الألومنيوم والزجاج وتشكيل المعادن شركة سعودية مقرها جدة، متخصصة في الواجهات الزجاجية بدون إطار، والحوائط الستائرية، والتزجيج الإنشائي، وكسوة ألواح الألومنيوم المركبة، وأعمال الستانلس ستيل والحديد والزجاج الفني.</span><span data-l="en">ALUTAL Company for Aluminum, Glass and Metal Forming Systems is a Jeddah-based Saudi contractor specialised in frameless façades, curtain walls, structural glazing, aluminum composite panel cladding, stainless steel, ironwork and artistic glass.</span></p>
+        <ul class="checks">
+          <li><span data-l="ar">دراسات فنية وإنشائية وتقديرات كميات وأسعار دقيقة</span><span data-l="en">Technical and structural studies, quantity take-off and pricing</span></li>
+          <li><span data-l="ar">رسومات ورش (Shop Drawings) بفريق أوتوكاد داخلي</span><span data-l="en">Shop drawings produced by our in-house AutoCAD team</span></li>
+          <li><span data-l="ar">تصنيع في مصنعنا وتركيب بفرقنا مع رقابة على الجودة والسلامة</span><span data-l="en">Fabrication in our own factory, installation by our own crews</span></li>
+        </ul>
+        <div><a class="btn btn-line" href="#about"><span data-l="ar">تعرّف على الشركة</span><span data-l="en">Our story</span><svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rule">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow"><span data-l="ar">مجالات التخصص</span><span data-l="en">Expertise</span></div>
+        <h2><span data-l="ar">ستة تخصصات تحت سقف واحد</span><span data-l="en">Six disciplines under one roof</span></h2>
+      </div>
+      <div class="tiles" id="homeTiles"></div>
+    </div>
+  </section>
+
+  <section class="rule">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow"><span data-l="ar">مشاريع مختارة</span><span data-l="en">Selected projects</span></div>
+        <h2><span data-l="ar">أعمال نُفذت في جدة ومكة وينبع والدوحة</span><span data-l="en">Delivered across Jeddah, Makkah, Yanbu and Doha</span></h2>
+      </div>
+      <div class="feat" id="featGrid"></div>
+      <div style="margin-top:28px"><a class="btn btn-line" href="#projects"><span data-l="ar">جميع المشاريع</span><span data-l="en">All projects</span><svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<div class="view" id="v-about">
+  <header class="phead img">
+    <img src="img/villa.webp" alt="" loading="lazy">
+    <div class="wrap">
+      <div class="eyebrow"><span data-l="ar">من نحن</span><span data-l="en">About us</span></div>
+      <h1><span data-l="ar">طريقة التنفيذ هي ما يصنع الفرق</span><span data-l="en">How we build is what sets us apart</span></h1>
+      <p><span data-l="ar">منذ عام 1986 والوتال تنفذ أعمال الألومنيوم والزجاج والمعادن لكبرى المشاريع في المملكة، معتمدة على فريق متخصص يجمع الهندسة والتصميم والتصنيع والتركيب.</span><span data-l="en">Since 1986 ALUTAL has executed aluminum, glass and metal works for major projects in the Kingdom, with a team that combines engineering, design, fabrication and installation.</span></p>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap split">
+      <div class="copy">
+        <div class="eyebrow"><span data-l="ar">قصتنا</span><span data-l="en">Our story</span></div>
+        <h2><span data-l="ar">من ورشة متخصصة إلى شريك تنفيذ للمشاريع الكبرى</span><span data-l="en">From a specialist workshop to a delivery partner for major projects</span></h2>
+        <p><span data-l="ar">بدأت الوتال بأعمال الزجاج والألومنيوم في جدة، ثم أسست قسماً متكاملاً للحوائط الستائرية والتزجيج الإنشائي بعد نجاح مشاريعها داخل جدة وخارجها. اليوم نغطي الواجهات الداخلية والخارجية، والأسقف المعلقة، والقباب، والسكايلايت، والهياكل القائمة ذاتياً (Free Stand)، إلى جانب أعمال الستانلس ستيل والحديد الفني والمباني الحديدية.</span><span data-l="en">ALUTAL started with glass and aluminum works in Jeddah, then built a dedicated curtain wall and structural glazing department after a run of successful projects in and outside the city. Today we cover internal and external façades, false ceilings, domes, skylights and free-standing structures, together with stainless steel, decorative ironwork and steel buildings.</span></p>
+        <p><span data-l="ar">نعمل مع الاستشاريين والمقاولين الرئيسيين من مرحلة العطاء: دراسة المخططات، والحسابات الإنشائية للقطاعات والزجاج، وجداول الكميات والتسعير، ثم إعداد رسومات الورش واعتمادها قبل التصنيع.</span><span data-l="en">We work with consultants and main contractors from tender stage: reviewing drawings, structural checks for profiles and glass, bills of quantities and pricing, then shop drawings for approval before fabrication.</span></p>
+      </div>
+      <div class="quote-wrap">
+        <p class="quote"><span data-l="ar">«العمل الذي نقوم به مهم، ولكن الأهم هو طريقتنا في تنفيذ هذا العمل.»</span><span data-l="en">“The work we do is important, but the most important is our method of carrying out this work.”</span></p>
+        <p style="color:var(--muted)"><span data-l="ar">من خطاب تقديم الشركة</span><span data-l="en">From the ALUTAL introduction letter</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="rule">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow"><span data-l="ar">منهجية العمل</span><span data-l="en">How we work</span></div>
+        <h2><span data-l="ar">أربع مراحل هندسية لكل مشروع</span><span data-l="en">Four engineering stages on every project</span></h2>
+      </div>
+      <div class="timeline">
+        <div><b>01</b><h4><span data-l="ar">الدراسة الفنية</span><span data-l="en">Technical study</span></h4><p><span data-l="ar">مراجعة المخططات المعمارية، اختيار النظام المناسب، والتحقق الإنشائي من القطاعات والزجاج وأحمال الرياح.</span><span data-l="en">Review of architectural drawings, system selection, and structural checks of profiles, glass and wind loads.</span></p></div>
+        <div><b>02</b><h4><span data-l="ar">الكميات والتسعير</span><span data-l="en">Quantities &amp; pricing</span></h4><p><span data-l="ar">مهندس مدني مختص بحصر الكميات وتقدير الأسعار يقدم عرضاً واضحاً ومفصلاً لكل بند.</span><span data-l="en">A dedicated civil engineer prepares quantity take-off and a clear, itemised price offer.</span></p></div>
+        <div><b>03</b><h4><span data-l="ar">رسومات الورش</span><span data-l="en">Shop drawings</span></h4><p><span data-l="ar">ثلاثة رسامين ومصممين على أوتوكاد يعدّون تفاصيل التثبيت والمقاطع والواجهات للاعتماد.</span><span data-l="en">Three AutoCAD draftsmen detail anchors, sections and elevations for approval.</span></p></div>
+        <div><b>04</b><h4><span data-l="ar">التصنيع والتركيب</span><span data-l="en">Fabrication &amp; installation</span></h4><p><span data-l="ar">19 فني قطاعات في المصنع و8 فنيي تركيب بإشراف مدير المصنع ومشرف التركيب.</span><span data-l="en">19 factory section technicians and 8 fixers, led by the factory manager and installation supervisor.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rule">
+    <div class="wrap split" style="align-items:start">
+      <div class="copy">
+        <div class="eyebrow"><span data-l="ar">الفريق</span><span data-l="en">Team</span></div>
+        <h2><span data-l="ar">61 متخصصاً بقيادة المدير العام عادل الغامدي</span><span data-l="en">61 specialists led by General Director Adel Al-Ghamdi</span></h2>
+        <p><span data-l="ar">فرق داخلية تغطي كل مرحلة، دون الاعتماد على مقاولي باطن في الأعمال الأساسية.</span><span data-l="en">In-house crews cover every stage, without subcontracting the core works.</span></p>
+        <div class="eyebrow" style="margin-top:18px"><span data-l="ar">موردون معتمدون نتعامل معهم</span><span data-l="en">Supply partners</span></div>
+        <div class="chips">
+          <span>Alupco</span><span>Techno Panel</span><span data-l="ar">الماسة لألواح الألومنيوم</span><span data-l="en">Almasa Aluminum Panels</span><span data-l="ar">الوكيل للزجاج</span><span data-l="en">Al Wakeel Glass</span><span data-l="ar">التوزان للتجارة والصناعة</span><span data-l="en">Al Tozan Trading &amp; Industry</span><span data-l="ar">الراجحي لتجارة الألومنيوم</span><span data-l="en">Al Rajhi Aluminum Trading</span><span data-l="ar">شركة مواد البناء المحدودة</span><span data-l="en">Building Materials Co. Ltd.</span><span>DORMA</span><span>RECORD</span><span>GEZE</span>
+        </div>
+      </div>
+      <table class="team" aria-label="Team structure">
+        <tbody id="teamBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="rule">
+    <div class="wrap split">
+      <div class="media"><img src="img/workshop.webp" alt="ALUTAL factory floor" loading="lazy"></div>
+      <div class="copy">
+        <div class="eyebrow"><span data-l="ar">رؤيتنا</span><span data-l="en">Vision</span></div>
+        <h2><span data-l="ar">حلول هندسية للغلاف الخارجي للمباني بمعايير عالمية</span><span data-l="en">Building-envelope engineering to international standards</span></h2>
+        <p><span data-l="ar">أن نكون الشريك الأول للمطورين والمقاولين في المملكة العربية السعودية والخليج لتنفيذ الواجهات والأنظمة المعدنية، عبر أنظمة مختبرة وفق المواصفات الأوروبية والأمريكية، وتنفيذ يلتزم بالجدول الزمني وبأعلى درجات الجودة والسلامة.</span><span data-l="en">To be the first-choice partner for developers and contractors in Saudi Arabia and the Gulf for façades and metal systems, using systems tested to European and American standards and delivered on programme with full attention to quality and safety.</span></p>
+        <ul class="checks">
+          <li><span data-l="ar">مشاريع منفذة خارج المملكة: أبراج صبان في الدوحة (5 أبراج × 48 طابقاً)</span><span data-l="en">Delivered abroad: Sabban Towers, Doha (5 towers × 48 floors)</span></li>
+          <li><span data-l="ar">عملاء من القطاعات الحكومية والخاصة والضيافة</span><span data-l="en">Clients across government, private and hospitality sectors</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ SERVICES ============ -->
+<div class="view" id="v-services">
+  <header class="phead img">
+    <img src="img/facade-2.webp" alt="" loading="lazy">
+    <div class="wrap">
+      <div class="eyebrow"><span data-l="ar">خدماتنا التخصصية</span><span data-l="en">Our expertise &amp; services</span></div>
+      <h1><span data-l="ar">من الحائط الستائري إلى القبة الزجاجية</span><span data-l="en">From the curtain wall to the glass dome</span></h1>
+      <p><span data-l="ar">تصميم وتصنيع وتركيب لكل عناصر الغلاف الخارجي والتشطيبات المعدنية والزجاجية الداخلية.</span><span data-l="en">Design, fabrication and installation of every element of the building envelope, plus interior metal and glass finishes.</span></p>
+    </div>
+  </header>
+  <div class="wrap" id="svcList"></div>
+</div>
+
+<!-- ============ PROJECTS ============ -->
+<div class="view" id="v-projects">
+  <header class="phead">
+    <div class="wrap">
+      <div class="eyebrow"><span data-l="ar">سابقة الأعمال</span><span data-l="en">Project portfolio</span></div>
+      <h1><span data-l="ar">معرض المشاريع</span><span data-l="en">Projects showcase</span></h1>
+      <p><span data-l="ar">مختارات من المشاريع المنفذة والجارية كما وردت في ملف سابقة أعمال الوتال. اضغط على أي مشروع لعرض المواصفات ونطاق العمل والصور.</span><span data-l="en">A selection of completed and ongoing work from the ALUTAL portfolio. Open any project for its scope, quantities and photos.</span></p>
+    </div>
+  </header>
+  <section style="padding-top:36px">
+    <div class="wrap">
+      <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+      <div class="grid" id="projGrid"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ SPECS ============ -->
+<div class="view" id="v-specs">
+  <header class="phead">
+    <div class="wrap">
+      <div class="eyebrow"><span data-l="ar">المواصفات الفنية والمواد</span><span data-l="en">Technical specifications</span></div>
+      <h1><span data-l="ar">أرقام دقيقة، أنظمة مختبرة</span><span data-l="en">Exact figures, tested systems</span></h1>
+      <p><span data-l="ar">نعتمد أنظمة قطاعات ألومنيوم من ألوبكو (Alupco) مختبرة وفق NF-EN وASTM، مع زجاج مفرد ومزدوج وعوازل EPDM وفواصل حرارية من البولي أميد.</span><span data-l="en">We fabricate with Alupco aluminum systems tested to NF-EN and ASTM, with single and double glazing, EPDM gaskets and polyamide thermal breaks.</span></p>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow"><span data-l="ar">تكوينات الزجاج</span><span data-l="en">Glass make-ups</span></div>
+        <h2><span data-l="ar">الزجاج المفرد والمزدوج</span><span data-l="en">Single and double glazing</span></h2>
+      </div>
+      <div class="glass-row" id="glassRow"></div>
+    </div>
+  </section>
+
+  <section class="rule">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow"><span data-l="ar">أنظمة القطاعات</span><span data-l="en">Aluminum systems</span></div>
+        <h2><span data-l="ar">جدول أنظمة الألومنيوم المعتمدة</span><span data-l="en">Approved aluminum system schedule</span></h2>
+        <p><span data-l="ar">أعماق إطارات من 40 إلى 123 مم، تشمل القطاعات 75 مم و80 مم، وسماكات جدار من 1.3 إلى 3 مم حسب النظام.</span><span data-l="en">Frame depths from 40 to 123 mm, including 75 mm and 80 mm profiles, with wall thickness from 1.3 to 3 mm depending on the system.</span></p>
+      </div>
+      <div class="tbl-wrap" tabindex="0" aria-label="Systems table"><table class="tbl"><thead><tr id="sysHead"></tr></thead><tbody id="sysBody"></tbody></table></div>
+    </div>
+  </section>
+
+  <section class="rule">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow"><span data-l="ar">اختبارات الأداء</span><span data-l="en">Performance testing</span></div>
+        <h2><span data-l="ar">نتائج اختبار الأنظمة</span><span data-l="en">System test results</span></h2>
+      </div>
+      <div class="tests">
+        <div class="test"><small>NF-EN 12207</small><b><span data-l="ar">نفاذية الهواء — الفئة 4</span><span data-l="en">Air permeability — Class 4</span></b><p><span data-l="ar">أعلى تصنيف لإحكام الهواء لأنظمة 50SG و ALUPCOtherm 123.</span><span data-l="en">Highest air-tightness class, achieved by 50SG and ALUPCOtherm 123.</span></p></div>
+        <div class="test"><small>NF-EN 12208</small><b><span data-l="ar">إحكام الماء حتى 2500 باسكال</span><span data-l="en">Watertight to 2,500 Pa</span></b><p><span data-l="ar">اجتاز نظام 50SG الاختبار عند ضغط 2500 باسكال، ونظام 123 الفئة 8A.</span><span data-l="en">50SG passed at 2,500 Pa test pressure; the 123 sliding system reached Class 8A.</span></p></div>
+        <div class="test"><small>ASTM E330</small><b><span data-l="ar">مقاومة الرياح 2250 باسكال</span><span data-l="en">Wind load 2,250 Pa</span></b><p><span data-l="ar">لا تشوه دائم تحت الضغط الموجب والسالب عند 2250 باسكال.</span><span data-l="en">No permanent deformation under positive and negative pressure at 2,250 Pa.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rule">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow"><span data-l="ar">المواد والعزل</span><span data-l="en">Materials &amp; sealing</span></div>
+        <h2><span data-l="ar">المعادن والعوازل ومواد الإحكام</span><span data-l="en">Metals, gaskets and sealants</span></h2>
+      </div>
+      <div class="matgrid">
+        <div class="mat"><h3><span data-l="ar">الستانلس ستيل</span><span data-l="en">Stainless steel</span></h3>
+          <ul><li><span data-l="ar">صفائح ومواسير درجة 304 لأعمال التكسية والدرابزين والديكور الداخلي والخارجي.</span><span data-l="en">Grade 304 sheet and tube for cladding, handrails and interior/exterior decoration.</span></li>
+          <li><span data-l="ar">درجة 316L للمواقع الساحلية والبيئات عالية الرطوبة والملوحة عند الطلب.</span><span data-l="en">Grade 316L on request for coastal, high-humidity and saline environments.</span></li>
+          <li><span data-l="ar">تشطيبات صحية سهلة التنظيف لمطابخ المستشفيات والمختبرات.</span><span data-l="en">Hygienic, easy-clean finishes for hospital kitchens and laboratories.</span></li></ul></div>
+        <div class="mat"><h3><span data-l="ar">العوازل والفواصل الحرارية</span><span data-l="en">Gaskets &amp; thermal breaks</span></h3>
+          <ul><li><span data-l="ar">جوانات EPDM في جميع الأنظمة.</span><span data-l="en">EPDM rubber gaskets in all systems.</span></li>
+          <li><span data-l="ar">فواصل بولي أميد على شكل I بمقاسات 16 و20 و24 مم، وعلى شكل C بمقاس 16 مم.</span><span data-l="en">Polyamide strips: I-shape 16, 20 and 24 mm; C-shape 16 mm.</span></li>
+          <li><span data-l="ar">إكسسوارات Euro-Groove من GIESSE وSAVIO وMASTER وLAVAAL.</span><span data-l="en">Euro-groove hardware from GIESSE, SAVIO, MASTER and LAVAAL.</span></li></ul></div>
+        <div class="mat"><h3><span data-l="ar">مواد الإحكام (Sealants)</span><span data-l="en">Sealants</span></h3>
+          <ul><li><span data-l="ar">سيليكون إنشائي لوصلات التزجيج الإنشائي، وسيليكون مقاوم للعوامل الجوية للفواصل المحيطية.</span><span data-l="en">Structural silicone for structural-glazing joints; weather-seal silicone for perimeter joints.</span></li>
+          <li><span data-l="ar">اختبارات توافق والتصاق مع الزجاج والقطاعات قبل التنفيذ حسب توصيات المصنّع.</span><span data-l="en">Compatibility and adhesion checks with glass and profiles before application, per manufacturer guidance.</span></li></ul></div>
+        <div class="mat"><h3><span data-l="ar">الزجاج الديكوري المصفّح</span><span data-l="en">Laminated decorative glass</span></h3>
+          <p><span data-l="ar">ثلاث طبقات حماية: زجاج مُلدّن، طبقة ديكورية وسيطة، ثم زجاج مُلدّن. يحمي الزجاج الطبقة الديكورية من الرطوبة والملوثات.</span><span data-l="en">Three layers of defence: annealed glass, decorative interlayer, annealed glass. The glass protects the interlayer from moisture and contaminants.</span></p>
+          <img src="img/glasslayers.webp" alt="Laminated glass layers" loading="lazy" style="border-radius:2px;max-height:180px;object-fit:contain;background:#fff"></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ CONTACT ============ -->
+<div class="view" id="v-contact">
+  <header class="phead">
+    <div class="wrap">
+      <div class="eyebrow"><span data-l="ar">تواصل معنا</span><span data-l="en">Contact us</span></div>
+      <h1><span data-l="ar">لنبدأ دراسة مشروعك</span><span data-l="en">Let’s study your project</span></h1>
+      <p><span data-l="ar">أرسل المخططات أو جداول الكميات، وسيعود إليك فريق المبيعات والدراسات الفنية بعرض مفصل.</span><span data-l="en">Send drawings or a bill of quantities and our sales and technical team will reply with a detailed offer.</span></p>
+    </div>
+  </header>
+  <section style="padding-top:40px">
+    <div class="wrap contact">
+      <form id="form" novalidate>
+        <div class="field"><label for="f-name"><span data-l="ar">الاسم</span><span data-l="en">Full name</span> <span class="req">*</span></label><input id="f-name" name="name" autocomplete="name" required><span class="err" id="e-name"></span></div>
+        <div class="field"><label for="f-company"><span data-l="ar">الشركة / الجهة</span><span data-l="en">Company</span></label><input id="f-company" name="company" autocomplete="organization"></div>
+        <div class="field"><label for="f-phone"><span data-l="ar">رقم الجوال</span><span data-l="en">Mobile</span> <span class="req">*</span></label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" dir="ltr" required><span class="err" id="e-phone"></span></div>
+        <div class="field"><label for="f-email"><span data-l="ar">البريد الإلكتروني</span><span data-l="en">Email</span></label><input id="f-email" name="email" type="email" autocomplete="email" dir="ltr"><span class="err" id="e-email"></span></div>
+        <div class="field"><label for="f-type"><span data-l="ar">نوع العمل</span><span data-l="en">Type of work</span></label><select id="f-type" name="type"></select></div>
+        <div class="field"><label for="f-city"><span data-l="ar">موقع المشروع</span><span data-l="en">Project location</span></label><input id="f-city" name="city"></div>
+        <div class="field full"><label for="f-msg"><span data-l="ar">تفاصيل المشروع</span><span data-l="en">Project details</span> <span class="req">*</span></label><textarea id="f-msg" name="msg" required></textarea><span class="err" id="e-msg"></span></div>
+        <div class="form-foot"><small><span data-l="ar">يُرسل الطلب إلى rami@alutal.com.sa</span><span data-l="en">Your request goes to rami@alutal.com.sa</span></small>
+          <button class="btn btn-primary" type="submit"><span data-l="ar">إعداد الطلب</span><span data-l="en">Prepare request</span><svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h12M9 3l5 5-5 5"/></svg></button></div>
+        <div class="done" id="done" hidden>
+          <b><span data-l="ar">طلبك جاهز للإرسال</span><span data-l="en">Your request is ready to send</span></b>
+          <p style="color:var(--muted);font-size:15px"><span data-l="ar">افتح بريدك لإرساله إلى المبيعات، أو انسخ النص وأرسله عبر واتساب أو البريد.</span><span data-l="en">Open your email app to send it to our sales team, or copy the text and send it by email or WhatsApp.</span></p>
+          <pre id="donePre"></pre>
+          <div class="row"><a class="btn btn-primary" id="mailLink" href="mailto:rami@alutal.com.sa"><span data-l="ar">فتح البريد</span><span data-l="en">Open email</span></a><button class="btn btn-line" type="button" id="copyReq"><span data-l="ar">نسخ النص</span><span data-l="en">Copy text</span></button></div>
+        </div>
+      </form>
+      <aside class="card-c" aria-label="Contact details">
+        <div class="row"><small><span data-l="ar">مدير المبيعات</span><span data-l="en">Sales Manager</span></small><div class="val"><span><span data-l="ar">رامي كنوة</span><span data-l="en">Rami Kenwa</span></span></div></div>
+        <div class="row"><small><span data-l="ar">البريد الرسمي</span><span data-l="en">Official email</span></small><div class="val"><a class="ltr" href="mailto:rami@alutal.com.sa">rami@alutal.com.sa</a><button class="cpy" type="button" data-copy="rami@alutal.com.sa">COPY</button></div></div>
+        <div class="row"><small><span data-l="ar">الجوال</span><span data-l="en">Mobile</span></small><div class="val"><a class="ltr" href="tel:+966509625500">+966 50 962 5500</a><button class="cpy" type="button" data-copy="+966509625500">COPY</button></div></div>
+        <div class="row"><small><span data-l="ar">بريد إضافي</span><span data-l="en">Secondary email</span></small><div class="val"><a class="ltr" href="mailto:pes-glass@hotmail.com">pes-glass@hotmail.com</a><button class="cpy" type="button" data-copy="pes-glass@hotmail.com">COPY</button></div></div>
+        <div class="row"><small><span data-l="ar">المكتب الرئيسي</span><span data-l="en">Head office</span></small>
+          <div style="color:var(--steel);font-size:15px"><span data-l="ar">بلازا العبداللطيف، الدور الخامس، مكتب رقم 515، طريق الملك فهد، حي الفيصلية، ص.ب 2465، جدة 23442، المملكة العربية السعودية</span><span data-l="en">Al-Abdul Latif Plaza, 5th Floor, Office No. 515, King Fahad Road, Al-Faisaliah District, P.O. Box 2465, Jeddah 23442, Saudi Arabia</span></div>
+          <a class="btn btn-line" style="margin-top:12px;justify-self:start;padding:11px 16px;font-size:14px" href="https://www.google.com/maps/search/?api=1&query=King+Fahad+Road+Al-Faisaliah+Jeddah" target="_blank" rel="noopener"><span data-l="ar">فتح في خرائط Google</span><span data-l="en">Open in Google Maps</span></a></div>
+        <div class="row"><small><span data-l="ar">ساعات العمل</span><span data-l="en">Working hours</span></small><div style="font-size:15px;color:var(--steel)"><span data-l="ar">الأحد – الخميس · 8:00 ص – 5:00 م</span><span data-l="en">Sun – Thu · 8:00 – 17:00</span></div></div>
+      </aside>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<div class="cta-band" id="ctaBand">
+  <div class="wrap">
+    <h2><span data-l="ar">لديك مشروع واجهات أو أعمال ألومنيوم؟ نرسل لك دراسة وعرض سعر.</span><span data-l="en">Planning a façade or aluminum package? We will send you a study and quotation.</span></h2>
+    <div class="ctas"><a class="btn btn-primary" href="#contact"><span data-l="ar">اطلب عرض سعر</span><span data-l="en">Request a quotation</span></a><a class="btn btn-line" href="#specs"><span data-l="ar">المواصفات الفنية</span><span data-l="en">Specifications</span></a></div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div style="display:grid;gap:14px">
+      <a class="brand" href="#home"><svg viewBox="0 0 40 40" aria-hidden="true" width="34" height="34"><path d="M20 3 37 36H29.5L20 17 10.5 36H3Z" fill="var(--accent)"/><path d="M14.2 28.5h11.6l2.6 5H11.6z" fill="var(--fg)"/></svg><span><b style="color:var(--fg)">ALUTAL</b></span></a>
+      <p style="max-width:42ch"><span data-l="ar">شركة الوتال لأنظمة الألومنيوم والزجاج وتشكيل المعادن — جدة، المملكة العربية السعودية.</span><span data-l="en">ALUTAL Company for Aluminum, Glass and Metal Forming Systems — Jeddah, Saudi Arabia.</span></p>
+    </div>
+    <div><h4><span data-l="ar">الموقع</span><span data-l="en">Site</span></h4><ul>
+      <li><a href="#about"><span data-l="ar">من نحن</span><span data-l="en">About</span></a></li><li><a href="#services"><span data-l="ar">خدماتنا</span><span data-l="en">Expertise</span></a></li><li><a href="#projects"><span data-l="ar">المشاريع</span><span data-l="en">Projects</span></a></li><li><a href="#specs"><span data-l="ar">المواصفات</span><span data-l="en">Specifications</span></a></li></ul></div>
+    <div><h4><span data-l="ar">الخدمات</span><span data-l="en">Services</span></h4><ul>
+      <li><span data-l="ar">الحوائط الستائرية</span><span data-l="en">Curtain walls</span></li><li><span data-l="ar">الكلادينج</span><span data-l="en">ACP cladding</span></li><li><span data-l="ar">الستانلس ستيل</span><span data-l="en">Stainless steel</span></li><li><span data-l="ar">القباب والسكايلايت</span><span data-l="en">Domes &amp; skylights</span></li></ul></div>
+    <div><h4><span data-l="ar">تواصل</span><span data-l="en">Contact</span></h4><ul>
+      <li class="ltr" style="text-align:start">rami@alutal.com.sa</li><li class="ltr" style="text-align:start">+966 50 962 5500</li><li><span data-l="ar">طريق الملك فهد، الفيصلية، جدة</span><span data-l="en">King Fahad Rd, Al-Faisaliah, Jeddah</span></li></ul></div>
+    <div class="base"><span>© <span id="yr">2026</span> ALUTAL</span><span data-l="ar">الجودة · السلامة · الإتقان</span><span data-l="en">Quality · Safety · Craftsmanship</span></div>
+  </div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="mTitle">
+  <button class="m-close" id="mClose" type="button" aria-label="Close">×</button>
+  <div class="m-in">
+    <div class="m-gal" id="mGal"></div>
+    <div class="m-body" id="mBody"></div>
+  </div>
+</dialog>
+
+<script>
+(function(){
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+let lang='ar';
+try{ const s=localStorage.getItem('alutal-lang'); if(s==='en'||s==='ar') lang=s; }catch(e){}
+const t=v=>Array.isArray(v)?(lang==='ar'?v[0]:v[1]):v;
+
+/* ---------- Categories ---------- */
+const CATS={
+  all:['الكل','All'],
+  facade:['واجهات وأبراج','Façades & towers'],
+  commercial:['تجاري ومعارض','Commercial & retail'],
+  gov:['مؤسسي وحكومي','Institutional & government'],
+  residential:['قصور وسكني','Palaces & residential'],
+  art:['زجاج فني وقباب','Art glass & domes'],
+  metal:['ستانلس ومعادن','Stainless & metal']
+};
+const LBL={client:['العميل / المالك','Client / owner'],area:['المساحة','Area'],value:['قيمة العقد','Contract value'],units:['الكمية','Quantity'],period:['مدة التنفيذ','Period'],glass:['الزجاج','Glazing'],contractor:['المقاول المنفذ','Main contractor'],system:['النظام','System'],eng:['ممثل المشروع','Project representative']};
+
+/* ---------- Projects (from ALUTAL Previous Works) ---------- */
+const P=[
+{id:'zahra',cat:'residential',feat:1,img:['zahra-2','zahra-1','zahra-3'],
+ t:['عمارة سكنية — حي الزهراء','Residential Building — Al-Zahra'],loc:['حي الزهراء، جدة','Al-Zahra, Jeddah'],
+ facts:[['system',['كلادينج ونوافذ ألومنيوم','ACP cladding & aluminum windows']]],
+ kv:['ACP','Windows'],
+ scope:[['كسوة واجهات بألواح الألومنيوم المركبة بلونين رمادي داكن وأبيض.','Façade cladding in aluminum composite panels, dark grey and white.'],['ألواح ديكورية بنقشة الخشب حول نوافذ الشقق.','Wood-grain decorative panels framing the apartment windows.'],['نوافذ ألومنيوم بإطار أسود لجميع الأدوار.','Black-framed aluminum windows on every floor.'],['تجهيز الواجهة لإضاءة خطية ليلية على حواف الكلادينج.','Façade detailed for linear night lighting along the cladding edges.']]},
+{id:'ghamdiVilla',cat:'residential',feat:1,img:['ghamdi-2','ghamdi-1'],
+ t:['فيلا محمد الغامدي','Mohammed Al-Ghamdi Villa'],loc:['حي الرياض، جدة','Al-Riyadh District, Jeddah'],
+ facts:[['client',['محمد الغامدي','Mohammed Al-Ghamdi']],['system',['حائط ستائري مزدوج الارتفاع','Double-height curtain wall']]],
+ kv:['Curtain wall','Sliding doors'],
+ scope:[['حائط ستائري بارتفاع مزدوج في الصالة الرئيسية المطلة على الفناء.','Double-height curtain wall in the main hall overlooking the courtyard.'],['واجهات زجاج عاكس على الفناء الداخلي.','Reflective glass façades around the inner courtyard.'],['أبواب سحاب ألومنيوم بإطار أسود ونوافذ شريطية رأسية.','Black-framed aluminum sliding doors and vertical strip windows.']]},
+{id:'turkiGhamdi',cat:'residential',img:[],soon:1,
+ t:['عمارة تركي الغامدي','Turki Al-Ghamdi Building'],loc:['حي السلامة، جدة','Al-Salamah, Jeddah'],
+ facts:[['client',['تركي الغامدي','Turki Al-Ghamdi']],['system',['نوافذ ألومنيوم وأحزمة واجهة','Aluminum windows & façade bands']]],
+ kv:['Windows','Bands'],
+ scope:[['نوافذ ألومنيوم بإطار أسود على واجهة الطوب الأحمر لجميع الأدوار.','Black-framed aluminum windows across the red-brick façade on every floor.'],['أجزاء علوية بفتح للخارج للتهوية في النوافذ.','Top-hung outward-opening vents for ventilation.'],['أحزمة ألومنيوم أفقية داكنة تفصل الأدوار على امتداد الواجهة.','Dark horizontal aluminum bands marking each floor along the façade.']]},
+{id:'mubarakMosque',cat:'gov',img:[],soon:1,
+ t:['مسجد تجميعة مبارك','Tajmeeat Mubarak Mosque'],loc:['جدة','Jeddah'],
+ facts:[['system',['نوافذ وأبواب ألومنيوم','Aluminum windows & doors']]],
+ kv:['Windows','Entrance'],
+ scope:[['نوافذ ألومنيوم رأسية طويلة بإطار أسود في واجهة الحجر.','Tall black-framed vertical aluminum windows set in the stone façade.'],['نوافذ علوية مزدوجة لإنارة قاعة الصلاة.','Upper twin windows to daylight the prayer hall.'],['أعمال المدخل الرئيسي.','Main entrance glazing.']]},
+{id:'dawar',cat:'commercial',img:[],soon:1,
+ t:['مطعم دوّار السعادة','Dawar Al-Saada Restaurant'],loc:['واجهة مطعم','Restaurant frontage'],
+ facts:[['system',['واجهة زجاجية وأبواب','Shopfront glazing & doors']]],
+ kv:['Shopfront'],
+ scope:[['واجهة زجاجية بقطاعات ألومنيوم سوداء للمطعم.','Black aluminum shopfront glazing.'],['أبواب زجاجية مزدوجة للمدخل.','Double glass entrance doors.'],['نوافذ جانبية بزجاج عاكس.','Side windows in reflective glass.']]},
+{id:'souq7',cat:'commercial',feat:1,img:['souq7-1','souq7-2','souq7-3','souq7-4','souq7-5','souq7-6','souq7-7','souq7-8','souq7-9'],
+ t:['مشروع سوق 7','Souq 7 Commercial Project'],loc:['جدة','Jeddah'],
+ facts:[['client',['شركة آزاد العقارية','Azad Real Estate Company']],['area','19,750 m²'],['units',['840 معرضاً · 19 مبنى','840 showrooms · 19 buildings']],['glass','DG 6 + 12 + 6 mm']],
+ kv:['19,750 m²','840','DG 6+12+6'],
+ scope:[['واجهات بنظام الحائط الستائري الذكي (Smart Curtain Wall) بزجاج مزدوج 6+12+6 مم.','Smart Curtain Wall façades with 6+12+6 mm double-glazed units.'],['تنفيذ 840 معرضاً تجارياً بمساحة إجمالية 19,750 م².','840 commercial showrooms with a total area of 19,750 m².'],['المباني التجارية: 94، 95، 97، 98، 99، 100، 6، 9، 14، 85، 90، 5، 24، 51، 53، 54، 36، 37، 48.','Commercial buildings no. 94, 95, 97, 98, 99, 100, 6, 9, 14, 85, 90, 5, 24, 51, 53, 54, 36, 37 and 48.'],['مهندسو المشروع: م. رياض علوان، م. سلطان غلام، م. خالد الوليلي.','Project engineers: Eng. Riyad Alloun, Eng. Sultan Ghoulam, Eng. Khaled Elwelily.']]},
+{id:'harthy',cat:'facade',feat:1,img:['harthy-2','harthy-3','harthy-1'],
+ t:['برج الحارثي (سعد)','Al-Harthy Tower (Saed)'],loc:['جدة','Jeddah'],
+ facts:[['contractor',['مؤسسة فاروق محمد بادله للمقاولات','Farouk Muhammad Bidallah Contracting Est.']],['area','3,200 m²'],['period',['20 أغسطس 2020 – 20 يناير 2021','Aug 20, 2020 – Jan 20, 2021']],['system',['حائط ستائري','Curtain wall']]],
+ kv:['3,200 m²','3 facades'],
+ scope:[['تركيب ثلاث واجهات بنظام الحائط الستائري.','Installation of three façades in curtain wall.'],['مساحة الحائط الستائري 3,200 م².','Curtain wall area 3,200 m².']]},
+{id:'china',cat:'commercial',feat:1,img:['china-1','china-2'],
+ t:['مشروع تشاينا تاون وشانيا تاون','China Town & Shania Town'],loc:['جدة','Jeddah'],
+ facts:[['client',['عبدالخالق سعيد','Abdul Khaleq Saeed']],['area',['7,200 m² زجاج','7,200 m² glazing']],['units',['1,400 m² كلادينج','1,400 m² cladding']],['value','SAR 6,020,000']],
+ kv:['7,200 m²','SAR 6.02M'],
+ scope:[['واجهات زجاجية بمساحة 7,200 م².','Glass façades, 7,200 m².'],['كسوة ألومنيوم (كلادينج) 1,400 م².','Aluminum cladding, 1,400 m².'],['درابزين ستانلس ستيل وتكسية مصاعد بالستانلس ستيل.','Stainless steel handrails and stainless steel elevator cladding.'],['مديرا المشروع: محمد الأنصاري، محمد العونسي.','Project managers: Mohamed Al-Ansari, Mohamed Al-Ounsi.']]},
+{id:'airport',cat:'gov',feat:1,img:['airport-4','airport-2','airport-3','airport-1','airport-5','airport-6'],
+ t:['مشروع مطار الملك عبدالعزيز','King Abdulaziz Airport Project'],loc:['جدة','Jeddah'],
+ facts:[['client',['الشركة العالمية للمواد الغذائية — قسم المقاولات','Global Foodstuff Co. — Contracting Division']],['area',['6 مبانٍ · 8,000 m²','6 buildings · 8,000 m²']],['units',['630 نافذة ألومنيوم','630 aluminum windows']],['value','SAR 4,300,000']],
+ kv:['8,000 m²','630 windows','SAR 4.3M'],
+ scope:[['إنشاء 6 مبانٍ مكتبية جديدة بمساحة 8,000 م².','Six new office buildings, 8,000 m² in total.'],['تركيب 630 نافذة ألومنيوم.','630 aluminum windows.'],['أبواب ألومنيوم وأبواب زجاجية وأبواب طوارئ.','Aluminum, glass and emergency doors.'],['تصنيع غرف مختبرات من الستانلس ستيل.','Stainless steel laboratory rooms.'],['ممثل المشروع: م. أيمن الشيخ.','Project engineer: Eng. Ayman Al-Sheikh.']]},
+{id:'dhahban',cat:'gov',feat:1,img:['dhahban-1','dhahban-2','dhahban-3','dhahban-4','dhahban-5','dhahban-6','dhahban-7','dhahban-8'],
+ t:['سكن العمال — مدينة ذهبان الطبية','Workers’ Accommodation — Dhahban Medical City'],loc:['ذهبان، جدة','Dhahban, Jeddah'],
+ facts:[['client',['الشركة العالمية للمواد الغذائية','Global Foodstuff Co.']],['area',['11 مبنى · 13,000 m²','11 buildings · 13,000 m²']],['units',['1,000 نافذة ألومنيوم','1,000 aluminum windows']],['value','SAR 7,870,000']],
+ kv:['13,000 m²','1,000 windows','SAR 7.87M'],
+ scope:[['مباني مهندسين ومستودعات ومسجد.','Engineers’ buildings, warehouses and a mosque.'],['11 مبنى مكتبياً بمساحة 13,000 م² و20 وحدة سكنية من طابقين.','11 office buildings (13,000 m²) and 20 two-storey housing units.'],['تركيب 1,000 نافذة ألومنيوم وأبواب ألومنيوم وزجاج وطوارئ.','1,000 aluminum windows plus aluminum, glass and emergency doors.']]},
+{id:'dk',cat:'facade',feat:1,img:['dk-1','dk-2','dk-3'],
+ t:['مصنع D&K — رابغ','D&K Factory — Rabigh'],loc:['مجمع دلة للحديد، رابغ','Dalla Steel Complex, Rabigh'],
+ facts:[['client',['مؤسسة النخبة للمقاولات','Elite Contracting Est.']],['area',['720 m² زجاج','720 m² glazing']],['units',['978 m² ألواح مركبة','978 m² ACP']],['value','SAR 790,500']],
+ kv:['720 m²','978 m² ACP','133 lm'],
+ scope:[['واجهات زجاجية 720 م².','Glass façades, 720 m².'],['ألواح ألومنيوم مركبة (كلادينج) 978 م².','Aluminum composite panels, 978 m².'],['زجاج مكاتب داخلية.','Interior office glazing.'],['درابزين ستانلس ستيل للمكاتب العلوية 133 متراً طولياً.','Stainless steel handrails for upper offices, 133 lm.']]},
+{id:'seef',cat:'commercial',img:['seef-1','seef-2','seef-3'],
+ t:['فروع معرض السيف','Al-Seef Gallery Branches'],loc:['جدة: الأمير فواز، القويزة، التيسير','Jeddah: Prince Fawaz, Al-Quwayza, Al-Taysir'],
+ facts:[['units',['3 فروع','3 branches']],['system',['تشطيبات معمارية وزجاج','Fit-out & glazing']]],
+ kv:['3 branches'],
+ scope:[['تشطيبات معمارية متكاملة.','Comprehensive architectural fit-out.'],['أعمال زجاج وواجهات.','Glass installations and shopfronts.'],['أعمال معدنية داخلية.','Interior metal works.']]},
+{id:'shaheen',cat:'facade',img:['shaheen-1','shaheen-2'],
+ t:['برج الشاهين','Al-Shaheen Tower'],loc:['جدة، حي السلامة','Jeddah, Al-Salamah'],
+ facts:[['client',['زكريا شاهين','Zakaria Shaheen']],['area',['1,200 m² زجاج','1,200 m² glazing']],['units',['380 m² كلادينج','380 m² cladding']],['value','SAR 736,000']],
+ kv:['1,200 m²','SAR 736K'],
+ scope:[['واجهات زجاجية 1,200 م².','Glass façades, 1,200 m².'],['كسوة ألومنيوم 380 م².','Aluminum cladding, 380 m².'],['الموقع: بجوار مسجد الشعيبي.','Location: next to Al-Shuaibi Mosque.']]},
+{id:'war',cat:'facade',img:['war-1','war-2'],
+ t:['برج وار','War Tower'],loc:['جدة','Jeddah'],
+ facts:[['area',['2,190 m² زجاج','2,190 m² glazing']],['units',['1,820 m² كلادينج','1,820 m² cladding']],['value','SAR 1,357,600']],
+ kv:['2,190 m²','1,820 m²'],
+ scope:[['واجهات زجاجية 2,190 م².','Glass façades, 2,190 m².'],['أعمال كلادينج 1,820 م².','Cladding works, 1,820 m².']]},
+{id:'salhia',cat:'facade',img:['salhia-1','salhia-2','salhia-3'],
+ t:['صالحية بلازا','Salhia Plaza'],loc:['جدة','Jeddah'],
+ facts:[['client',['مؤسسة القوة والأمان','Strength and Safety Foundation']],['area',['2,500 m² كلادينج','2,500 m² cladding']]],
+ kv:['2,500 m²'],
+ scope:[['تركيب واجهات الكلادينج بمساحة 2,500 م².','Installation of cladding façades, 2,500 m².']]},
+{id:'saabar',cat:'gov',img:['saabar-2','saabar-4','saabar-1','saabar-3','saabar-5'],
+ t:['ميناء صعبر','Saabar Port Project'],loc:['صعبر','Saabar'],
+ facts:[['client',['الشركة العالمية للمواد الغذائية','Global Foodstuff Co.']],['area',['5 مبانٍ · 7,000 m²','5 buildings · 7,000 m²']],['units',['189 نافذة','189 windows']]],
+ kv:['7,000 m²','189 windows'],
+ scope:[['مكاتب بمبانٍ حديدية ومستودعات ومسجد.','Steel-building offices, clad warehouses and a mosque.'],['واجهات كلادينج و189 نافذة ألومنيوم.','Cladding façades and 189 aluminum windows.'],['أبواب ألومنيوم وزجاج وطوارئ، ودورات مياه.','Aluminum, glass and emergency doors; washroom blocks.']]},
+{id:'gates',cat:'gov',img:[],big:'7,200',bigl:['m² كلادينج','m² cladding'],
+ t:['بوابات المدينة الصناعية الأولى','First Industrial City Gates'],loc:['جدة','Jeddah'],
+ facts:[['client',['شركة المرطان للطرق','Al-Muratan Roads Company']],['area','7,200 m²'],['units',['7 بوابات','7 gates']],['value','SAR 1,636,000']],
+ kv:['7 gates','SAR 1.64M'],
+ scope:[['تكسية مداخل 7 بوابات بمساحة 7,200 م².','Cladding of 7 gate entrances, 7,200 m².'],['ممثل المشروع: م. حيدر الشريف.','Project engineer: Eng. Haider Al-Sharif.']]},
+{id:'hospital',cat:'gov',img:[],big:'620K',bigl:['ريال · صيانة','SAR · maintenance'],
+ t:['مستشفى الملك فهد بالباحة وبنك الدم','King Fahd Hospital, Al-Baha & Blood Bank'],loc:['الباحة','Al-Baha'],
+ facts:[['client',['مؤسسة الشروق للمقاولات','Al-Shorouk Contracting Est.']],['value','SAR 620,000']],
+ kv:['SAR 620K'],
+ scope:[['هياكل معدنية وتكسية كلادينج داخلية.','Metal framing and interior cladding.'],['سور حديد لحديقة المستشفى.','Iron fence around the hospital garden.'],['درابزين للسكايلايت الرئيسي وصيانة القبة الداخلية.','Handrails for the main skylights and maintenance of the internal dome.']]},
+{id:'alj',cat:'commercial',img:[],big:'3',bigl:['معارض','showrooms'],
+ t:['معارض عبداللطيف جميل — البغدادية','Abdul Latif Jameel Showrooms — Al-Baghdadia'],loc:['جدة','Jeddah'],
+ facts:[['eng',['طه عمرانية ومؤسسة محمد طه','Taha Omrania & Muhammad Taha Foundation']],['units',['3 معارض','3 showrooms']]],
+ kv:['3 showrooms'],
+ scope:[['واجهات زجاجية وكسوة ألومنيوم لثلاثة معارض.','Glass façades and aluminum cladding for three showrooms.']]},
+{id:'sabbanDoha',cat:'metal',img:['mirror-1'],
+ t:['أبراج صبان — الدوحة','Sabban Towers — Doha'],loc:['الدوحة، قطر','Doha, Qatar'],
+ facts:[['client',['شركة أفرينا','Afrina Company']],['units',['5 أبراج × 48 طابقاً','5 towers × 48 floors']],['period',['24 شهراً','24 months']],['area',['4,080 مرآة','4,080 mirrors']]],
+ kv:['4,080 mirrors','680 lm'],
+ scope:[['توريد وتركيب 4,080 مرآة.','Supply and installation of 4,080 mirrors.'],['درابزين ستانلس ستيل لـ 40 فيلا بطول 680 متراً.','Stainless steel railings for 40 tower villas, 680 lm.'],['225 مصد مواقف حديدي بمقاس 240 × 120 سم.','225 iron parking bumpers, 240 × 120 cm.'],['17 شقة في كل طابق.','17 apartments per floor.']]},
+{id:'sabbanJed',cat:'metal',img:['rail-5','rail-2'],
+ t:['أبراج صبان — جدة','Sabban Towers — Jeddah'],loc:['طريق المدينة مع شارع الملك عبدالله','Madinah Rd × King Abdullah St'],
+ facts:[['client',['شركة أفرينا','Afrina Company']],['units',['برجان','2 towers']],['area',['478 m درابزين زجاج','478 m glass balustrade']]],
+ kv:['350 lm','478 m'],
+ scope:[['درابزين خدمة 350 متراً طولياً.','Service railings, 350 lm.'],['درابزين زجاجي للفلل 478 متراً.','Glass balustrades for villas, 478 m.'],['زجاج بدون إطار وحواجز حديد لمداخل المواقف.','Frameless glass and iron railings at parking entrances.']]},
+{id:'mansour',cat:'facade',img:[],big:'528',bigl:['m² تاج البرج','m² tower crown'],
+ t:['برج المنصور — مكة المكرمة','Al-Mansour Tower — Makkah'],loc:['الرصيفة، مكة المكرمة','Al-Rusaifah, Makkah'],
+ facts:[['client',['شركة أفرينا','Afrina Company']],['units',['240 m² لوفر','240 m² louvres']]],
+ kv:['528 m²','240 m²'],
+ scope:[['اسطوانتان حديديتان مكسوتان بالكلادينج 12 × 4 م.','Two cladding-clad iron drums, 12 × 4 m.'],['لوفرات ألومنيوم 10 سم بمساحة 240 م².','10 cm aluminum louvres, 240 m².'],['عمل ديكوري أعلى البرج بمساحة 528 م².','Decorative tower-top installation, 528 m².']]},
+{id:'zikry',cat:'art',feat:1,img:['dome-1','dome-2','dome-4'],
+ t:['سوق الذكري — ينبع','Al-Zikry Market — Yanbu'],loc:['ينبع','Yanbu'],
+ facts:[['units',['3 قباب حديد وزجاج','3 iron & glass domes']],['area',['قطر 14 م · ارتفاع 5 م','Ø 14 m · 5 m high']],['value','SAR 622,000']],
+ kv:['Ø 14 m','190 lm'],
+ scope:[['قبة رئيسية بقطر 14 م وارتفاع 5 م.','Main dome: 14 m diameter, 5 m high.'],['قبتان بقطر 9 م وارتفاع 3 م.','Two domes: 9 m diameter, 3 m high.'],['درابزين داخلي وخارجي 190 متراً طولياً.','Internal and external balustrades, 190 lm.'],['ممثل المشروع: م. عبدالرحيم.','Project representative: Eng. Abdul Rahim.']]},
+{id:'kurdi',cat:'art',feat:1,img:['dome-3','stained-1','sand-1'],
+ t:['قصر الشيخ خالد الكردي','Palace of Sheikh Khaled Al-Kurdi'],loc:['جدة','Jeddah'],
+ facts:[['client',['الشيخ خالد الكردي','Sheikh Khaled Al-Kurdi']],['area',['قبة معشقة Ø 6 م','Stained dome Ø 6 m']],['units',['43 م زجاج محفور','43 m carved glass']]],
+ kv:['Ø 6 m','43 m'],
+ scope:[['قبة زجاج معشق/ديكوري بقطر 6 أمتار.','Stained/decorative glass dome, 6 m diameter.'],['زجاج محفور بالرمل بأعماق متعددة للدرج بطول 43 متراً.','Multi-depth sand-carved glass for stairwells, 43 m.'],['أعمال زجاج فنية بتصاميم خاصة.','Specialty artistic glass to custom designs.']]},
+{id:'darhadi',cat:'art',img:['mirror-1'],
+ t:['دار هادي — مكة المكرمة','Dar Hadi — Makkah'],loc:['مكة المكرمة','Makkah'],
+ facts:[['client',['المملكة القابضة','Kingdom Holding']],['units',['800 مرآة','800 mirrors']],['value','SAR 444,000']],
+ kv:['800 mirrors'],
+ scope:[['مرايا مشطوفة بإطارات ستانلس ستيل (800 قطعة) — 360,000 ريال.','Beveled mirrors with stainless steel frames (800 units) — SAR 360,000.'],['درابزين زجاج وستانلس بتفاصيل خشبية 70 م.ط — 84,000 ريال.','Glass & stainless handrails with timber details, 70 lm — SAR 84,000.'],['ممثل المشروع: م. مصطفى العوضي.','Project manager: Eng. Mustafa Al-Awadi.']]},
+{id:'dayan',cat:'art',img:['shower-1','shower-2'],
+ t:['دار الديان — مكة المكرمة','Dar Al-Dayan — Makkah'],loc:['مكة المكرمة','Makkah'],
+ facts:[['client',['المملكة القابضة','Kingdom Holding']],['units',['146 وحدة','146 units']],['value','SAR 126,000']],
+ kv:['146 units'],
+ scope:[['توريد وتركيب مرايا وكبائن استحمام زجاجية (146 وحدة).','Supply and installation of mirrors and glass shower enclosures (146 units).']]},
+{id:'safwa',cat:'residential',img:['shower-2'],
+ t:['مباني الصفوة','Al-Safwa Buildings'],loc:['خلف الرديسي مول، جدة','Behind Al-Redisi Mall, Jeddah'],
+ facts:[['client',['شركة الصفوة للمقاولات','Al-Safwa Contracting Co.']],['units',['1,200 كابينة استحمام','1,200 shower enclosures']]],
+ kv:['1,200 units'],
+ scope:[['تركيب 1,200 كابينة استحمام زجاجية.','Installation of 1,200 glass shower enclosures.']]},
+{id:'aljvillas',cat:'residential',img:['sand-2'],
+ t:['فلل الشيخ عبداللطيف جميل','Villas of Sheikh Abdul Latif Jameel'],loc:['الواجهة البحرية، حي الشاطئ','Seafront, Al-Shati'],
+ facts:[['client',['قسم المقاولات — الشركة العالمية للمواد الغذائية','International Foodstuff Co. — Contracting']],['units',['86 م × 120 سم','86 m × 120 cm']]],
+ kv:['86 m'],
+ scope:[['أعمال زجاج ديكوري وقواطع زجاجية خاصة بطول 86 م وارتفاع 120 سم.','Decorative glass and special glass partitions, 86 m long × 120 cm high.']]},
+{id:'muratan',cat:'residential',img:['win-1','win-2'],
+ t:['فيلا الشيخ علي المرطان','Villa of Sheikh Ali Al-Muratan'],loc:['حي الشاطئ، جدة','Al-Shati, Jeddah'],
+ facts:[['area',['162 m² زجاج إنشائي','162 m² structural glazing']],['units',['16 شيش','16 shutters']]],
+ kv:['162 m²'],
+ scope:[['واجهات زجاج إنشائي للواجهة الخلفية 162 م².','Rear structural glass façades, 162 m².'],['16 شيش نوافذ ونوافذ ألومنيوم بشيش مدمج.','16 window shutters and aluminum windows with integrated shutters.']]},
+{id:'muratanOff',cat:'commercial',img:['laser-2'],
+ t:['مكاتب شركة المرطان','Al-Muratan Company Offices'],loc:['حي الحمراء، جدة','Al-Hamra, Jeddah'],
+ facts:[['client',['شركة المرطان للطرق','Al-Muratan Roads Company']],['value','SAR 421,000']],
+ kv:['SAR 421K'],
+ scope:[['هيكل إنشائي وأبواب زجاجية.','Structural framework and glass doors.'],['مكاتب زجاجية داخلية.','Internal glass offices.'],['درابزين وزجاج معشق لمكتب الشيخ علي.','Handrails and stained-glass windows for Sheikh Ali’s office.']]},
+{id:'sheraton',cat:'metal',img:['rail-3'],
+ t:['مدينة شيراتون — المنطقة المركزية','Sheraton City — Central District'],loc:['القطع 1406–1407','Plots 1406–1407'],
+ facts:[['client',['سادة السعودية','Saudi Sada']],['units',['400 م.ط درابزين','400 lm railings']]],
+ kv:['400 lm'],
+ scope:[['مرايا بإطارات ستانلس ستيل ديكورية.','Mirrors with decorative stainless steel framing.'],['درابزين ستانلس ستيل 400 متر طولي.','Stainless steel railings, 400 lm.']]},
+{id:'yanbuAfrina',cat:'metal',img:['rail-1'],
+ t:['مباني شركة أفرينا — ينبع','Afrina Company Buildings — Yanbu'],loc:['ينبع','Yanbu'],
+ facts:[['units',['6 مبانٍ · 210 م.ط','6 buildings · 210 lm']],['value','SAR 126,000']],
+ kv:['210 lm'],
+ scope:[['تصنيع وتركيب درابزين لستة مبانٍ بطول 210 أمتار.','Railings for six buildings, 210 lm.']]},
+{id:'binabd',cat:'residential',img:['binabd-1','binabd-2','win-3'],
+ t:['مشروع بن عبدالله','Bin Abdullah Project'],loc:['جدة','Jeddah'],
+ facts:[['system',['نوافذ وأبواب ألومنيوم','Aluminum windows & doors']]],
+ kv:['Windows & doors'],
+ scope:[['تصنيع وتركيب نوافذ وأبواب ألومنيوم عالية الجودة للمباني السكنية.','Fabrication and installation of aluminum windows and doors for residential buildings.']]},
+{id:'kitchens',cat:'metal',feat:1,img:['kitchen-1','kitchen-2','kitchen-3','kitchen-4','kitchen-5'],
+ t:['مطابخ ستانلس للمستشفيات والمطاعم','Stainless kitchens for hospitals & restaurants'],loc:['جدة والطائف','Jeddah & Taif'],
+ facts:[['system',['ستانلس ستيل صحي','Hygienic stainless steel']],['units',['تصنيع في ورشتنا','Made in our workshop']]],
+ kv:['SS 304','Custom'],
+ scope:[['مطابخ تجارية للمطاعم والفنادق والمطابخ المركزية، ومنها مطاعم كودا في جدة والطائف.','Commercial kitchens for restaurants, hotels and central kitchens, including Koda Restaurants in Jeddah and Taif.'],['مطابخ المستشفيات ومناطق التحضير والغسيل.','Hospital kitchens, preparation and dishwashing areas.'],['طاولات عمل وأحواض ووحدات شطف وخزائن علوية وسفلية.','Worktables, sinks, pre-rinse units, wall and under-counter cabinets.'],['شفاطات ومظلات ستانلس ورفوف وعربات تخزين.','Exhaust hoods, stainless canopies, shelving, racks and trolleys.']]}
+];
+
+/* ---------- Services ---------- */
+const S=[
+{code:'CW',img:['facade-1','facade-3','souq7-6'],t:['الواجهات الزجاجية والتزجيج الإنشائي','Curtain walls & structural glazing'],
+ d:['قسم متكامل لتصميم وتنفيذ جميع أشكال الواجهات الزجاجية الداخلية والخارجية، بأنظمة الحائط الستائري ذات الغطاء (Cap) والتزجيج الإنشائي ثنائي الجوانب، مع النوافذ العلوية القلابة المدمجة.','A dedicated department designs and builds every type of internal and external glass façade: capped curtain walls, two-sided structural glazing and integrated top-hung vents.'],
+ sp:[['النظام','System','CW60 · 50SG'],['الزجاج','Glazing','6+12+6 / 6+16+6'],['المليونات','Mullions','50 – 195 mm'],['مشروع مرجعي','Reference','Souq 7 · Al-Harthy']]},
+{code:'FX',img:['laser-2','rail-5','facade-2'],t:['الواجهات بدون إطار وأنظمة التثبيت','Frameless façades & fixing systems'],
+ d:['واجهات ثابتة ومتحركة بأنظمة Patch Fitting وSpider (عادي، مواسير، كابلات)، وأعمال Free Stand بجميع الارتفاعات، إضافة إلى الأبواب الأوتوماتيكية من DORMA وRECORD وGEZE.','Fixed and operable frameless façades with patch fittings and spider systems (regular, pipe and cable), free-standing glass at any height, and automatic doors by DORMA, RECORD and GEZE.'],
+ sp:[['التثبيت','Fixing','Patch · Spider · Cable'],['الأبواب','Doors','DORMA · RECORD · GEZE'],['الاستخدام','Use','Malls · hotels · hospitals'],['الزجاج','Glass','Tempered / laminated']]},
+{code:'AL',img:['win-1','win-3','binabd-1'],t:['أعمال الألومنيوم الذكية والقطاعات الخاصة','Aluminum systems & special profiles'],
+ d:['قسم خاص للنوافذ والأبواب واللوفرات بأنظمة مفصلية وسحاب، بفواصل حرارية أو بدونها، وأعماق قطاعات من 40 إلى 123 مم، منها القطاعات 75 مم (7.5 سم) و80 مم و100 مم.','A dedicated section for windows, doors and louvres in hinged and sliding systems, thermal or non-thermal, with profile depths from 40 to 123 mm, including 75 mm (7.5 cm), 80 mm and 100 mm frames.'],
+ sp:[['الأعماق','Depths','40 – 123 mm'],['سماكة الجدار','Wall','1.3 – 3 mm'],['العزل الحراري','Thermal break','Polyamide 16–24 mm'],['الإكسسوارات','Hardware','GIESSE · SAVIO']]},
+{code:'ACP',img:['dk-1','salhia-1','shaheen-2'],t:['كسوة ألواح الألومنيوم المركبة (كلادينج)','Aluminum composite panel cladding'],
+ d:['تصميم ودراسة فنية وتصنيع وتركيب لجميع أعمال الكلادينج من المنظور الأولي حتى التشطيب النهائي، للمجمعات التجارية والسكنية والمستشفيات ومحطات الوقود والمستودعات، بالتعاون مع كبرى المصانع في السوق السعودي.','Design, technical study, fabrication and installation of all cladding works, from first perspective to final finish, for malls, residential complexes, hospitals, fuel stations and warehouses, in partnership with leading Saudi panel factories.'],
+ sp:[['أكبر مشروع','Largest','7,200 m² · 7 gates'],['المصانع','Factories','Techno Panel · Almasa'],['الاستخدام','Use','Façades · columns · signage'],['التشطيب','Finish','PVDF colours']]},
+{code:'SS',img:['kitchen-1','rail-3','rail-4'],t:['تشكيل المعادن والستانلس ستيل','Metal forming & stainless steel'],
+ d:['تكسية الجدران والأعمدة، الدرابزين، المصاعد، والديكورات الداخلية والخارجية بصفائح ومواسير 304، و316L للمواقع الساحلية. ونصنع مطابخ المستشفيات والمطاعم، والأبواب والبوابات الحديدية، والحفر بالليزر على الحديد.','Wall, column, elevator and handrail cladding plus interior and exterior decoration in grade 304, and 316L for coastal sites. We also build hospital and restaurant kitchens, iron gates and doors, and laser-engraved ironwork.'],
+ sp:[['الدرجة','Grade','304 · 316L'],['الدرابزين','Railings','680 lm · Doha'],['المطابخ','Kitchens','Hospitals · restaurants'],['الحديد','Iron','Gates · laser engraving']]},
+{code:'SB',img:['dhahban-1','saabar-4','airport-4'],t:['المباني الحديدية والكبائن الأمنية','Steel buildings & security cabins'],
+ d:['تصميم وتصنيع المباني الحديدية والهناجر والمكاتب الجاهزة وكبائن الحراسة والأمن، مع نوافذها وأبوابها وتكسيتها، كما في مشاريع ذهبان وميناء صعبر ومطار الملك عبدالعزيز.','Design and fabrication of steel buildings, hangars, site offices and guard/security cabins, complete with windows, doors and cladding, as delivered at Dhahban, Saabar Port and King Abdulaziz Airport.'],
+ sp:[['أكبر مشروع','Largest','13,000 m²'],['النوافذ','Windows','1,000 units'],['الأنواع','Types','Hangars · offices · cabins'],['التسليم','Delivery','Turnkey']]},
+{code:'SK',img:['dome-1','dome-3','dome-4'],t:['القباب والسكايلايت والمظلات','Domes, skylights & canopies'],
+ d:['قباب حديد وزجاج، وقباب زجاج معشق، وسكايلايت ومظلات زجاجية وأسقف معلقة، بتصميم إنشائي للهيكل وتفاصيل تصريف وإحكام.','Iron-and-glass domes, stained glass domes, skylights, glass canopies and false ceilings, with structural framing design and drainage and sealing details.'],
+ sp:[['أكبر قبة','Largest dome','Ø 14 m · 5 m'],['قبة معشقة','Stained dome','Ø 6 m'],['مشاريع','Projects','Al-Zikry · Al-Kurdi'],['الصيانة','Maintenance','Hospital domes']]},
+{code:'AG',img:['stained-1','sand-1','laser-1'],t:['الزجاج الفني والمرايا','Artistic glass & mirrors'],
+ d:['زجاج معشق، رسم على الزجاج بالليزر، حفر بالرمل بأعماق متعددة، مرايا مشطوفة، كبائن استحمام، وقواطع ديكورية للفنادق والقصور والفلل.','Stained glass, laser drawing on glass, multi-depth sandblasting, beveled mirrors, shower enclosures and decorative partitions for hotels, palaces and villas.'],
+ sp:[['المرايا','Mirrors','4,080 · Doha'],['كبائن الاستحمام','Showers','1,200 units'],['التقنيات','Techniques','Laser · sandblast'],['الاستخدام','Use','Palaces · hotels']]},
+{code:'FO',img:['seef-1','kitchen-3','laser-2'],t:['التشطيبات الداخلية واللوحات الإعلانية','Interior fit-out & signage'],
+ d:['قواطع داخلية، تشطيبات بهو الفنادق، تكسية الأعمدة والجدران، وحدات عرض ورفوف للمحلات، ولوحات إعلانية وشعارات مضيئة.','Interior partitions, hotel lobby finishes, column and wall cladding, retail counters and display units, billboards and illuminated logos.'],
+ sp:[['مشروع','Project','Al-Seef Gallery'],['القواطع','Partitions','Glass · metal'],['اللوحات','Signage','Illuminated'],['التجزئة','Retail','Counters · stands']]}
+];
+const HOME_TILES=[0,1,2,3,4,6];
+
+/* ---------- Systems table ---------- */
+const SYS=[
+['ALUPCO 45',['نوافذ مفصلية','Hinged windows'],'45 / 75 / 80 / 100 / 105','52','1.3 – 3','SG 6 · DG 18 / 24',0],
+['ALUPCO 52',['نوافذ مفصلية','Hinged windows'],'52','60','1.5 – 3','6–12 · DG 24–30',0],
+['ALUPCO 52 Coplanar',['أبواب مفصلية','Hinged doors'],'52','52','1.5 – 3','6–12 · DG 24–30',0],
+['ALUPCO 52 Overlap',['أبواب مفصلية','Hinged doors'],'52','60','1.5 – 3','6–12 · DG 24–30',0],
+['Saraya 40',['نوافذ مفصلية','Hinged windows'],'40 / 80','47','1.3 – 2','SG 6 · DG 18 / 24',0],
+['Saraya 100',['نوافذ سحاب','Sliding windows'],'100','31','1.3 – 2','SG 6 · DG 18 / 24',0],
+['Saraya 110',['نوافذ وأبواب سحاب','Sliding windows & doors'],'110','35','1.3 – 2','SG 6 · DG 18 / 24',0],
+['Saraya 120',['نوافذ وأبواب سحاب','Sliding windows & doors'],'120','37','1.3 – 2','SG 6 · DG 18 / 24',0],
+['ALUPCOtherm 56D/60D/64D',['أبواب مفصلية','Hinged doors'],'48 / 52 / 56','56 / 60 / 64','1.5 – 2','DG 24 – 32','I 16/20/24'],
+['ALUPCOtherm 56W/60W/64W',['نوافذ مفصلية','Hinged windows'],'48 / 52 / 56','56 / 60 / 64','1.5 – 2','DG 24 – 32','I 16/20/24'],
+['ALUPCOtherm 83SL',['سحاب + شبك','Sliding + flyscreen'],'83','35','1.5','DG 24 (6+12+6)','C 16'],
+['ALUPCOtherm 97SL',['نوافذ سحاب','Sliding windows'],'97','35','1.5 – 2','DG 24 (6+12+6)','C 16'],
+['ALUPCOtherm 123',['سحاب + شبك','Sliding + flyscreen'],'110 – 123','40','1.5 – 2','DG 24 (6+12+6)','C 16'],
+['ALUPCO CW60',['حائط ستائري','Curtain wall'],['مليون 50–110','Mullion 50–110'],['ترانزوم 50–110','Transom 50–110'],'1.8','DG 24 (6+12+6)',0],
+['ALUPCO 50SG',['تزجيج إنشائي ثنائي','2-sided structural glazing'],['مليون 50–195','Mullion 50–195'],['ترانزوم 50–192','Transom 50–192'],['متغير','Varies'],'DG 28 (6+16+6)',['اختياري','Optional']]
+];
+const SYS_H=[['النظام','System'],['الاستخدام','Application'],['عمق الإطار (مم)','Frame depth (mm)'],['الضلفة (مم)','Sash (mm)'],['السماكة (مم)','Wall (mm)'],['الزجاج (مم)','Glazing (mm)'],['فاصل حراري','Thermal break']];
+
+/* ---------- Glass cards ---------- */
+const G=[
+ {lay:[6],t:['زجاج مفرد','Single glazing'],m:'SG 6 mm',d:['للنوافذ الداخلية والأنظمة غير المعزولة.','For interior and non-insulated windows.']},
+ {lay:[6,6,6],t:['مزدوج 18 مم','Double glazing 18 mm'],m:'DG 6 + 6 + 6',d:['خيار اقتصادي لأنظمة السحاب والمفصلي.','Economical option for sliding and hinged systems.']},
+ {lay:[6,12,6],t:['مزدوج 24 مم','Double glazing 24 mm'],m:'DG 6 + 12 + 6',d:['المواصفة القياسية للحوائط الستائرية — المعتمدة في سوق 7.','Standard curtain wall make-up — as used at Souq 7.']},
+ {lay:[6,16,6],t:['مزدوج 28 مم','Double glazing 28 mm'],m:'DG 6 + 16 + 6',d:['للتزجيج الإنشائي 50SG بعزل حراري وصوتي أعلى.','For 50SG structural glazing with higher thermal and acoustic performance.']}
+];
+
+const TEAM=[[['المدير العام','General Director'],1],[['مدير المبيعات والمندوبون','Sales manager & representatives'],3],[['مدير المصنع ومشرف التركيب','Factory manager & installation supervisor'],2],[['رسام أوتوكاد / مصمم','AutoCAD draftsman / designer'],3],[['مهندس مدني — كميات وتسعير','Civil engineer — quantities & pricing'],1],[['فنيو تركيب','Fixers'],8],[['فنيو قطاعات الألومنيوم بالمصنع','Aluminum section technicians (factory)'],19],[['فنيو زجاج ومعشق وحديد وستانلس ورملي','Glass, stained glass, iron, stainless & sandblast technicians'],3]];
+
+const FORM_TYPES=[['واجهات زجاجية / حائط ستائري','Glass façades / curtain wall'],['كلادينج ألومنيوم','ACP cladding'],['نوافذ وأبواب ألومنيوم','Aluminum windows & doors'],['ستانلس ستيل ودرابزين','Stainless steel & railings'],['قباب وسكايلايت','Domes & skylights'],['زجاج فني ومرايا','Art glass & mirrors'],['مبانٍ حديدية وكبائن','Steel buildings & cabins'],['مطابخ ستانلس','Stainless kitchens'],['أخرى','Other']];
+
+const im=n=>`img/${n}.webp`;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function card(p){
+  const ph = p.img.length
+    ? `<img src="${im(p.img[0])}" alt="${esc(t(p.t))}" loading="lazy" decoding="async">`
+    : p.soon ? `<div class="bp"><b class="soon">ALUTAL</b><span>${lang==='ar'?'صور المشروع قريباً':'Photos coming soon'}</span></div>`
+    : `<div class="bp"><b class="ltr">${p.big}</b><span>${esc(t(p.bigl))}</span></div>`;
+  return `<button class="pc" type="button" data-id="${p.id}"><div class="ph">${ph}<span class="cat">${esc(t(CATS[p.cat]))}</span></div>
+  <div class="meta"><h3>${esc(t(p.t))}</h3><div class="loc">${esc(t(p.loc))}</div><div class="kv">${p.kv.map(k=>`<span class="ltr">${esc(k)}</span>`).join('')}</div></div></button>`;
+}
+
+let filter='all';
+try{ const f=localStorage.getItem('alutal-filter'); if(f && CATS[f]) filter=f; }catch(e){}
+function renderProjects(){
+  const counts={}; P.forEach(p=>counts[p.cat]=(counts[p.cat]||0)+1); counts.all=P.length;
+  $('#filters').innerHTML=Object.keys(CATS).map(k=>`<button type="button" data-f="${k}" aria-pressed="${k===filter}">${esc(t(CATS[k]))}<span class="n">${counts[k]||0}</span></button>`).join('');
+  $('#projGrid').innerHTML=P.filter(p=>filter==='all'||p.cat===filter).sort((a,b)=>(a.soon?1:0)-(b.soon?1:0)).map(card).join('');
+}
+function renderStatic(){
+  $('#featGrid').innerHTML=['zahra','ghamdiVilla','souq7','china','harthy','kurdi'].map(id=>card(P.find(p=>p.id===id))).join('');
+  $('#homeTiles').innerHTML=HOME_TILES.map(i=>{const s=S[i];return `<a class="tile" href="#services"><span class="code">${s.code}</span><h3>${esc(t(s.t))}</h3><p>${esc(t(s.d)).split(/[،,.]/)[0]}.</p><span class="go">${lang==='ar'?'التفاصيل ←':'Details →'}</span></a>`}).join('');
+  $('#svcList').innerHTML=S.map((s,i)=>`<article class="svc" id="svc-${s.code}"><div class="pics">${s.img.map((n,j)=>`<img src="${im(n)}" alt="" loading="lazy" decoding="async">`).join('')}</div>
+   <div class="body"><span class="num">${String(i+1).padStart(2,'0')} · ${s.code}</span><h2>${esc(t(s.t))}</h2><p>${esc(t(s.d))}</p>
+   <div class="specs">${s.sp.map(x=>`<div><small>${esc(lang==='ar'?x[0]:x[1])}</small><b class="ltr" style="text-align:start">${esc(x[2])}</b></div>`).join('')}</div></div></article>`).join('');
+  $('#teamBody').innerHTML=TEAM.map(r=>`<tr><td>${esc(t(r[0]))}</td><td>${r[1]}</td></tr>`).join('')+`<tr class="total"><td>${lang==='ar'?'إجمالي القوى العاملة':'Total workforce'}</td><td>61</td></tr>`;
+  $('#sysHead').innerHTML=SYS_H.map(h=>`<th scope="col">${esc(t(h))}</th>`).join('');
+  $('#sysBody').innerHTML=SYS.map(r=>`<tr><td class="ltr" style="text-align:start">${r[0]}</td><td>${esc(t(r[1]))}</td><td class="mono">${esc(t(r[2]))}</td><td class="mono">${esc(t(r[3]))}</td><td class="mono">${esc(t(r[4]))}</td><td class="mono">${esc(r[5])}</td><td>${r[6]?`<span class="pill">${esc(t(r[6]))}</span>`:`<span class="pill off">—</span>`}</td></tr>`).join('');
+  $('#glassRow').innerHTML=G.map(g=>{
+    const total=g.lay.reduce((a,b)=>a+b,0), sc=150/30; let x=(220-total*sc)/2, parts='';
+    g.lay.forEach((w,i)=>{const W=w*sc; parts+= i%2===0?`<rect x="${x}" y="10" width="${W}" height="90" fill="var(--accent)" fill-opacity=".35" stroke="var(--accent)"/>`:`<rect x="${x}" y="10" width="${W}" height="90" fill="none" stroke="var(--muted)" stroke-dasharray="3 3"/><rect x="${x}" y="88" width="${W}" height="12" fill="var(--muted)" fill-opacity=".6"/>`;
+      parts+=`<text x="${x+W/2}" y="120" text-anchor="middle" fill="var(--fg)" font-size="11" font-family="IBM Plex Mono,monospace">${w}</text>`; x+=W;});
+    return `<div class="gcard"><svg viewBox="0 0 220 130" role="img" aria-label="${g.m}">${parts}</svg><h3>${esc(t(g.t))}</h3><span class="mono ltr" style="text-align:start">${g.m}</span><p>${esc(t(g.d))}</p></div>`}).join('');
+  const sel=$('#f-type'), v=sel.selectedIndex; sel.innerHTML=FORM_TYPES.map((o,i)=>`<option value="${i}">${esc(t(o))}</option>`).join(''); if(v>=0) sel.selectedIndex=v;
+  $('#f-name').placeholder=lang==='ar'?'مثال: م. أحمد العتيبي':'e.g. Eng. Ahmed Al-Otaibi';
+  $('#f-phone').placeholder='05X XXX XXXX';
+  $('#f-email').placeholder='name@company.com';
+  $('#f-city').placeholder=lang==='ar'?'جدة، حي ...':'Jeddah, district …';
+  $('#f-msg').placeholder=lang==='ar'?'نوع المبنى، المساحات التقريبية، نوع الزجاج المطلوب، موعد التنفيذ...':'Building type, approximate areas, glass type, programme…';
+}
+
+/* ---------- Modal ---------- */
+const dlg=$('#dlg');
+function openProject(id){
+  const p=P.find(x=>x.id===id); if(!p) return;
+  const gal=$('#mGal');
+  if(p.img.length){
+    gal.innerHTML=`<img class="main" id="mMain" src="${im(p.img[0])}" alt="${esc(t(p.t))}">`+(p.img.length>1?`<div class="thumbs">${p.img.map((n,i)=>`<button type="button" data-src="${im(n)}" aria-current="${i===0}" aria-label="${i+1}"><img src="${im(n)}" alt="" loading="lazy"></button>`).join('')}</div>`:'');
+  } else gal.innerHTML=p.soon?`<div class="bpbig"><b class="ltr">ALUTAL</b><span>${lang==='ar'?'صور المشروع قريباً':'Photos coming soon'}</span></div>`:`<div class="bpbig"><b class="ltr">${p.big}</b><span>${esc(t(p.bigl))}</span></div>`;
+  $('#mBody').innerHTML=`<span class="eyebrow">${esc(t(CATS[p.cat]))}</span><h2 id="mTitle">${esc(t(p.t))}</h2><div class="loc">${esc(t(p.loc))}</div>
+   <div class="m-facts">${p.facts.map(f=>`<div><small>${esc(t(LBL[f[0]]))}</small><b>${esc(t(f[1]))}</b></div>`).join('')}</div>
+   <div><div class="eyebrow" style="margin-bottom:10px">${lang==='ar'?'نطاق العمل':'Scope of work'}</div><ul>${p.scope.map(s=>`<li>${esc(t(s))}</li>`).join('')}</ul></div>
+   <a class="btn btn-primary" href="#contact" data-close>${lang==='ar'?'اطلب مشروعاً مماثلاً':'Request a similar project'}</a>`;
+  dlg.dataset.id=id;
+  if(!dlg.open) dlg.showModal();
+}
+document.addEventListener('click',e=>{
+  const c=e.target.closest('.pc'); if(c){openProject(c.dataset.id);return;}
+  const f=e.target.closest('[data-f]'); if(f){filter=f.dataset.f; try{localStorage.setItem('alutal-filter',filter)}catch(_){} renderProjects(); return;}
+  const th=e.target.closest('.thumbs button'); if(th){$('#mMain').src=th.dataset.src; $$('.thumbs button').forEach(b=>b.setAttribute('aria-current',b===th)); return;}
+  if(e.target.closest('[data-close]')) dlg.close();
+  const cp=e.target.closest('[data-copy]'); if(cp) copyText(cp.dataset.copy,cp);
+});
+$('#mClose').onclick=()=>dlg.close();
+dlg.addEventListener('click',e=>{ if(e.target===dlg) dlg.close(); });
+
+function copyText(txt,btn){
+  const ok=()=>{ if(!btn) return; const o=btn.innerHTML; btn.textContent=lang==='ar'?'تم النسخ':'COPIED'; setTimeout(()=>btn.innerHTML=o,1500); };
+  try{ navigator.clipboard.writeText(txt).then(ok).catch(()=>fallback()); }catch(e){ fallback(); }
+  function fallback(){ const ta=document.createElement('textarea'); ta.value=txt; document.body.appendChild(ta); ta.select(); try{document.execCommand('copy'); ok();}catch(_){} ta.remove(); }
+}
+
+/* ---------- Routing ---------- */
+const VIEWS=['home','about','services','projects','specs','contact'];
+function route(){
+  const h=(location.hash||'#home').slice(1); const v=VIEWS.includes(h)?h:'home';
+  $$('.view').forEach(el=>el.classList.toggle('on',el.id==='v-'+v));
+  $$('.nav a').forEach(a=>{ if(a.getAttribute('href')==='#'+v) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); });
+  $('#ctaBand').hidden = v==='contact';
+  $('#nav').classList.remove('open'); $('#menuBtn').setAttribute('aria-expanded','false');
+  if(dlg.open) dlg.close();
+  window.scrollTo(0,0);
+  const titles={home:'',about:['من نحن','About'],services:['خدماتنا','Expertise'],projects:['المشاريع','Projects'],specs:['المواصفات الفنية','Specifications'],contact:['تواصل معنا','Contact']};
+  document.title = titles[v] ? `${t(titles[v])} · ALUTAL` : 'ALUTAL';
+}
+window.addEventListener('hashchange',route);
+
+/* ---------- Language / theme / menu ---------- */
+function applyLang(){
+  document.documentElement.lang=lang; document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+  renderStatic(); renderProjects();
+  if(dlg.open) openProject(dlg.dataset.id);
+  if(!$('#done').hidden) buildRequest();
+}
+$('#langBtn').onclick=()=>{ lang=lang==='ar'?'en':'ar'; try{localStorage.setItem('alutal-lang',lang)}catch(e){} applyLang(); };
+$('#themeBtn').onclick=()=>{
+  const r=document.documentElement; const cur=r.dataset.theme || (matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');
+  r.dataset.theme = cur==='light'?'dark':'light';
+};
+$('#menuBtn').onclick=()=>{ const n=$('#nav'); const o=n.classList.toggle('open'); $('#menuBtn').setAttribute('aria-expanded',o); };
+
+/* ---------- Form ---------- */
+const MSG={req:['هذا الحقل مطلوب','This field is required'],phone:['أدخل رقماً صحيحاً، مثل 0509625500','Enter a valid number, e.g. 0509625500'],email:['أدخل بريداً صحيحاً، مثل name@company.com','Enter a valid email, e.g. name@company.com']};
+let lastReq='';
+function buildRequest(){
+  const v=id=>$(id).value.trim();
+  const lines = lang==='ar'
+   ? [`طلب عرض سعر — ${t(FORM_TYPES[$('#f-type').value])}`,'',`الاسم: ${v('#f-name')}`,`الشركة: ${v('#f-company')||'—'}`,`الجوال: ${v('#f-phone')}`,`البريد: ${v('#f-email')||'—'}`,`موقع المشروع: ${v('#f-city')||'—'}`,'',`التفاصيل:`,v('#f-msg')]
+   : [`Quotation request — ${t(FORM_TYPES[$('#f-type').value])}`,'',`Name: ${v('#f-name')}`,`Company: ${v('#f-company')||'—'}`,`Mobile: ${v('#f-phone')}`,`Email: ${v('#f-email')||'—'}`,`Location: ${v('#f-city')||'—'}`,'','Details:',v('#f-msg')];
+  lastReq=lines.join('\n');
+  $('#donePre').textContent=lastReq;
+  $('#mailLink').href='mailto:rami@alutal.com.sa?subject='+encodeURIComponent(lines[0])+'&body='+encodeURIComponent(lastReq);
+}
+$('#form').addEventListener('submit',e=>{
+  e.preventDefault(); let ok=true;
+  const set=(id,m)=>{ $('#e-'+id).textContent=m?t(m):''; $('#f-'+id).setAttribute('aria-invalid',!!m); if(m) ok=false; };
+  set('name',$('#f-name').value.trim()?null:MSG.req);
+  const ph=$('#f-phone').value.replace(/[\s-]/g,''); set('phone',!ph?MSG.req:(/^(\+?966|0)?5\d{8}$/.test(ph)||/^\+?\d{8,15}$/.test(ph))?null:MSG.phone);
+  const em=$('#f-email').value.trim(); set('email',!em||/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)?null:MSG.email);
+  set('msg',$('#f-msg').value.trim()?null:MSG.req);
+  if(!ok){ const f=$('[aria-invalid="true"]'); f&&f.focus(); return; }
+  buildRequest(); $('#done').hidden=false; $('#done').scrollIntoView({behavior:'smooth',block:'nearest'});
+});
+$('#copyReq').onclick=e=>copyText(lastReq,e.currentTarget);
+
+$('#yr').textContent=new Date().getFullYear();
+applyLang(); route();
+})();
+</script>
