@@ -2,7 +2,7 @@
 
 This repo is the website of **شركة الوتال للألومنيوم والزجاج وتشكيل المعادن (ALUTAL)**, Jeddah.
 Static site: `index.html` + `img/`. Every push to `main` is deployed to GitHub Pages by `.github/workflows/pages.yml` (1–2 min).
-Live: https://pesglass019-ui.github.io/alutal
+Live: https://www.alutal.com.sa (old https://pesglass019-ui.github.io/alutal redirects there)
 
 For every change, follow the `alutal-site` skill (`.claude/skills/alutal-site/SKILL.md`). Always reply in Arabic, short and friendly. The owner is not a developer.
 
@@ -19,6 +19,6 @@ Template to send the owner when info is missing:
 > أرسل الصور كمرفقات في رسالة جديدة، ومعها: اسم المشروع، الحي والمدينة، العميل، نوع الأعمال (وإن توفرت: المساحة، القيمة، السنة).
 
 ## Open items (update this list when they change)
-- **Custom domain www.alutal.com.sa:** the domain is at **Sahara Net (صحاري نت)**; mail is on Zoho. The owner was asked to add DNS `CNAME www → pesglass019-ui.github.io`, keeping the Zoho MX/TXT records. Only **after** they confirm the record exists, add a `CNAME` file containing `www.alutal.com.sa` and push. Then tell them to enter the domain in Settings → Pages → Custom domain and tick Enforce HTTPS. Adding the file earlier breaks the live site.
+- **Custom domain: done.** Live at https://www.alutal.com.sa (DNS at Sahara Net, `CNAME` file in repo, Enforce HTTPS on). Keep the `CNAME` file; never touch the Zoho mail records.
 - **مطعم دوّار السعادة (`id:'dawar'`):** city/district unknown; `loc` currently says «واجهة مطعم». Ask the owner.
 - **عمارة تركي الغامدي:** assumed to be the red-brick building (`img/turki-1.webp`). The owner did not object.
