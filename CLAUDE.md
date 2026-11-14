@@ -22,4 +22,3 @@ Template to send the owner when info is missing:
 
 ## Open items (update this list when they change)
 - **Custom domain: done.** Live at https://www.alutal.com.sa (DNS at Sahara Net, `CNAME` file in repo, Enforce HTTPS on). Keep the `CNAME` file; never touch the Zoho mail records.
-- **مطعم دوّار السعادة (`id:'dawar'`):** city/district unknown; `loc` currently says «واجهة مطعم». Ask the owner.
