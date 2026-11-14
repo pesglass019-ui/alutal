@@ -22,3 +22,5 @@ Template to send the owner when info is missing:
 
 ## Open items (update this list when they change)
 - **Custom domain: done.** Live at https://www.alutal.com.sa (DNS at Sahara Net, `CNAME` file in repo, Enforce HTTPS on). Keep the `CNAME` file; never touch the Zoho mail records.
+
+Project history (what was done and decided, in Arabic): `HISTORY.md`. Append to it after each change session.
