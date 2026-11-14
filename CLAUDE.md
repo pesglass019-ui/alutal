@@ -13,6 +13,8 @@ When the owner says anything like «اضف مشروع», «اضف الصور ع�
 - **Photos:** as attachments **in a new message**, not while Claude is still working on a previous request. Photos sent mid-turn are not saved to disk. If a photo isn't on disk, ask for it again in a new message.
 - **For each project:** name, district and city, client, type of works. If available, also area, contract value and year.
 - **For a new page:** page name, what should appear on it, and photos if any.
+- **No personal names on the site** (owners, sheikhs, engineers, staff). Private projects are titled generically: «فيلا خاصة — الحي», «عمارة سكنية خاصة — الحي», «قصر خاص». Company names (clients/contractors) are fine.
+- **Never write "since 1986" or a founding year.** ALUTAL is a new name; the team has 30+ years of experience. Use that wording.
 - Never invent numbers, clients or locations. Describe scope only from what the photos show.
 
 Template to send the owner when info is missing:
@@ -21,4 +23,3 @@ Template to send the owner when info is missing:
 ## Open items (update this list when they change)
 - **Custom domain: done.** Live at https://www.alutal.com.sa (DNS at Sahara Net, `CNAME` file in repo, Enforce HTTPS on). Keep the `CNAME` file; never touch the Zoho mail records.
 - **مطعم دوّار السعادة (`id:'dawar'`):** city/district unknown; `loc` currently says «واجهة مطعم». Ask the owner.
-- **عمارة تركي الغامدي:** assumed to be the red-brick building (`img/turki-1.webp`). The owner did not object.
