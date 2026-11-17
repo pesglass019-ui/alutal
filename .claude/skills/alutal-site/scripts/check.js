@@ -5,7 +5,7 @@ const {chromium} = require('playwright');
 const path = require('path');
 const root = path.resolve(__dirname, '../../../..');
 const out = process.argv[2];
-const VIEWS = ['home','about','services','projects','specs','contact'];
+const VIEWS = ['home','about','services','projects','specs','syria','contact'];
 (async () => {
   const b = await chromium.launch(); const errs = [];
   for (const [w,h,name,scheme] of [[1440,900,'desktop','dark'],[390,844,'phone','light']]) {
